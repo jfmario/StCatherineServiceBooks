@@ -1,0 +1,1 @@
+"""Liturgics PDF assembly pipeline."""

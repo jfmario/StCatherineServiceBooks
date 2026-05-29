@@ -1,0 +1,30 @@
+Name: Divine Liturgy
+Subtitle: TBD
+
+Description: TODO
+
+Filename: divine-liturgy.pdf
+
+Components:
+  - Key: GreatDoxology
+    Name: Great Doxology
+    TocExempt: false
+    Type: library-pdf
+    Path: orthros/great-doxology/doxology-tone-1.pdf
+    Pages:
+      Start: 2
+    Side: verso
+  - Key: TodayIsSalvation
+    Name: Today Is Salvation
+    Type: library-pdf
+    Path: orthros/hymn-after-great-doxology/today-is-salvation-tone-4.pdf
+  - Key: HavingRisen
+    Name: Having Risen from the Tomb
+    Type: library-pdf
+    Path: orthros/hymn-after-great-doxology/having-risen-tone-8.pdf
+  - Key: LitanyResponses
+    Name: Litany Responses
+    TocExempt: true
+    Type: library-pdf
+    Path: common/litany-responses.pdf
+    Side: verso
