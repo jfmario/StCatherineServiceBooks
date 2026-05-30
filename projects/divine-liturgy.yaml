@@ -13,7 +13,6 @@ Components:
     Path: orthros/great-doxology/doxology-tone-1.pdf
     Pages:
       Start: 2
-    Side: verso
   - Key: TodayIsSalvation
     Name: Today Is Salvation
     Type: library-pdf
@@ -27,4 +26,101 @@ Components:
     TocExempt: true
     Type: library-pdf
     Path: common/litany-responses.pdf
+    Pages:
+      End: 1
     Side: verso
+  - Key: LitanyOfPeace
+    Name: Litany of Peace
+    Type: local-md
+    Path: components/common/great-litany.md
+  - Key: Antiphon1
+    Name: First Antiphon
+    Type: library-pdf
+    Path: divine-liturgy/antiphons/antiphon-1.pdf
+  - Key: LittleLitany1
+    Name: The Little Litany
+    TocExempt: true
+    Type: local-md
+    Path: components/divine-liturgy/little-litany-1.md
+  - Key: Antiphon2
+    Name: Second Antiphon
+    Type: library-pdf
+    Path: divine-liturgy/antiphons/antiphon-2.pdf
+  - Key: OnlyBegotten
+    Name: Only Begotten Son
+    Type: library-pdf
+    Path: divine-liturgy/antiphons/only-begotten.pdf
+  - Key: LittleLitany2
+    Name: The Little Litany
+    TocExempt: true
+    Type: local-md
+    Path: components/divine-liturgy/little-litany-2.md
+  - Key: Beatitudes
+    Name: The Beatitudes
+    Type: library-pdf
+    Path: divine-liturgy/antiphons/beatitudes.pdf
+    Side: verso
+  - Key: EntranceHymn
+    Name: Entrance Hymn
+    Type: library-pdf
+    Path: divine-liturgy/entrance-hymn/entrance-hymn.pdf
+  - Key: HymnsOfTheDay
+    Name: Hymns of the Day
+    TocExempt: true
+    Type: local-md
+    Path: components/divine-liturgy/hymns-of-the-day.md
+  - Key: StCatherine
+    Name: Hymn for St Catherine
+    Type: library-pdf
+    Path: menaion/11/25/st-catherine.pdf
+  - Key: Kontakion
+    Name: Kontakion
+    Type: library-pdf
+    Path: divine-liturgy/kontakion/kontakion-ordinary.pdf
+    Side: verso
+  - Key: Trisagion
+    Name: Trisagion
+    Type: library-pdf
+    Path: divine-liturgy/trisagion/trisagion.pdf
+    Side: verso
+    Pages:
+      End: 2
+  - Key: ProkeimenonAndEpistle
+    Name: Prokeimenon and Epistle
+    Type: local-md
+    Path: components/common/epistle.md
+  - Key: Alleluia
+    Name: Alleluia
+    Type: library-pdf
+    Path: divine-liturgy/epistle-gospel/alleluia-verses.pdf
+  - Key: GospelResponses
+    Name: Gospel Responses
+    TocExempt: true
+    Type: library-pdf
+    Path: divine-liturgy/epistle-gospel/gospel-responses.pdf
+    Side: verso
+  - Key: Gospel
+    Name: Gospel
+    Type: local-md
+    Path: components/common/gospel.md
+  - Key: PreCherubic
+    Name: Prayer for Catechumens
+    Type: local-md
+    Path: components/divine-liturgy/pre-cherubic.md
+  - Key: CherubicHymn
+    Name: Cherubic Hymn
+    Type: library-pdf
+    Path: divine-liturgy/cherubic-hymn/cherubic-hymn.pdf
+    Pages:
+      End: 1
+  - Key: GreatEntrance
+    Name: The Great Entrance
+    Type: local-md
+    Path: components/divine-liturgy/great-entrance.md
+  - Key: PostCherubicHymn
+    Name: Post-Cherubic Hymn
+    TocExempt: true
+    Type: library-pdf
+    Path: divine-liturgy/cherubic-hymn/cherubic-hymn.pdf
+    Pages:
+      Start: 2

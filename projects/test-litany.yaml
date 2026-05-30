@@ -1,0 +1,12 @@
+Name: Test Litany
+Subtitle: local-md smoke test
+
+Description: Offline smoke test for markdown components
+
+Filename: test-litany.pdf
+
+Components:
+  - Key: LitanyOfPeace
+    Name: Litany of Peace
+    Type: local-md
+    Path: components/common/great-litany.md

@@ -90,7 +90,37 @@ AWS credentials must be available through the standard boto3 credential chain (e
 
 ### `local-md`
 
-Markdown sources for Jinja rendering. **Not yet implemented** — the build will fail with a clear error if a project includes `local-md` components.
+Markdown sources rendered with Jinja2 and converted to PDF via ReportLab. Path is relative to the **repository root**.
+
+```yaml
+Type: local-md
+Path: components/common/great-litany.md
+```
+
+#### Front matter
+
+Each `.md` file may begin with YAML front matter (parsed but not rendered). Common fields:
+
+| Field | Description |
+|-------|-------------|
+| `data` | Directory name for data YAML files (default: `data`) |
+
+Front matter keys are also passed into the Jinja template context as variables, alongside a `metadata` dict.
+
+#### Jinja templates
+
+- **`ref(name, key)`** — load `{data}/{name}.yaml` and return the value at `key`
+- **`{% include '_includes/…' %}`** — include partials from [`components/_includes/`](../components/_includes/) (Jinja loader root is `components/`)
+
+Example component: [`components/common/great-litany.md`](../components/common/great-litany.md) with data in [`data/great-litany.yaml`](../data/great-litany.yaml) and include [`components/_includes/litany.md`](../components/_includes/litany.md).
+
+Rendered PDFs use Times serif (matching cover and TOC). The `Pages` field is **not supported** for `local-md` in v1.
+
+Offline smoke test:
+
+```bash
+python scripts/build.py projects/test-litany.yaml
+```
 
 ## Page layout conventions
 
