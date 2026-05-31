@@ -1,0 +1,67 @@
+Name: Vespers with an Entrance
+Subtitle: St Catherine Orthodox Church
+Date: 2026-05-30
+
+Description: TODO
+
+Filename: great-vespers.pdf
+
+Components:
+  - Key: ComeLetUsWorship
+    Name: Come, Let Us Worship
+    Type: library-pdf
+    Path: common/come-let-us-worship.pdf
+  - Key: Psalm103
+    Name: Psalm 103
+    Type: local-md
+    Path: components/psalter/103.md
+    Config:
+      repeat: true
+      glory: true
+      alleluia: true
+      god_and_hope: true
+  - Key: LitanyResponses
+    Name: Litany Responses
+    TocExempt: true
+    Type: library-pdf
+    Path: common/litany-responses.pdf
+    Pages:
+      End: 1
+    Side: verso
+  - Key: LitanyOfPeace
+    Name: Litany of Peace
+    Type: local-md
+    Path: components/common/great-litany.md
+    Config:
+      enarxis: false
+  - Key: OlihcInstructions
+    Name: O Lord, I Have Cried
+    Type: local-md
+    Path: components/vespers/olihc.md
+    Side: recto
+  - Key: Olihc
+    Name: O Lord, I Have Cried
+    TocExempt: true
+    Type: library-pdf
+    Path: vespers/o-lord-i-have-cried/o-lord-i-have-cried-tone-8.pdf
+    Pages:
+      End: 2
+    Side: verso
+  - Key: OlihcVerses
+    Name: O Lord, I Have Cried Verses
+    TocExempt: true
+    Type: local-md
+    Path: components/vespers/olihc-verses.md
+  - Key: Stichera
+    Name: Stichera
+    TocExempt: true
+    Type: local-md
+    Path: components/vespers/stichera.md
+  - Key: GladsomeLight
+    Name: O Gladsome Light
+    Type: library-pdf
+    Path: vespers/entrance/gladsome-light.pdf
+  - Key: Prokeimenon
+    Name: Saturday Evening Prokeimenon
+    Type: library-pdf
+    Path: vespers/prokeimenon/saturday.pdf

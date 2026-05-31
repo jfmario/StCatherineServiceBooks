@@ -32,6 +32,7 @@ class Component:
     toc_exempt: bool = False
     pages: PageRange | None = None
     side: Side | None = None
+    config: dict | None = None
 
 
 @dataclass(frozen=True)

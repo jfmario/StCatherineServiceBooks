@@ -93,6 +93,11 @@ def _parse_component(raw: object, index: int) -> Component:
                 f"{context}: 'Side' must be one of: {allowed}"
             ) from exc
 
+    component_config = raw.get("Config")
+    if component_config is not None:
+        if not isinstance(component_config, dict):
+            raise YamlValidationError(f"{context}: 'Config' must be a mapping")
+
     return Component(
         key=key,
         name=name,
@@ -101,6 +106,7 @@ def _parse_component(raw: object, index: int) -> Component:
         toc_exempt=toc_exempt,
         pages=pages,
         side=side,
+        config=component_config,
     )
 
 

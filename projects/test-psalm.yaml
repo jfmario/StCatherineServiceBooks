@@ -1,0 +1,17 @@
+Name: Test Psalm
+Subtitle: template + config smoke test
+
+Description: Offline smoke test for psalm template rendering
+
+Filename: test-psalm.pdf
+
+Components:
+  - Key: Psalm103
+    Name: Psalm 103
+    Type: local-md
+    Path: components/psalter/103.md
+    Config:
+      repeat: true
+      glory: true
+      alleluia: true
+      god_and_hope: true

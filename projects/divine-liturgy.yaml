@@ -33,6 +33,8 @@ Components:
     Name: Litany of Peace
     Type: local-md
     Path: components/common/great-litany.md
+    Config:
+      enarxis: true
   - Key: Antiphon1
     Name: First Antiphon
     Type: library-pdf
@@ -124,3 +126,59 @@ Components:
     Path: divine-liturgy/cherubic-hymn/cherubic-hymn.pdf
     Pages:
       Start: 2
+  - Key: LitanyResponses2
+    Name: Litany Responses
+    TocExempt: true
+    Type: library-pdf
+    Path: common/litany-responses.pdf
+    Pages:
+      End: 1
+    Side: verso
+  - Key: Supplication
+    Name: Litany of Supplication
+    Type: local-md
+    Path: components/common/supplication.md
+  - Key: ExchangePeace
+    Name: Exchange of Peace
+    Type: library-pdf
+    Path: divine-liturgy/exchange-peace/exchange-peace.pdf
+  - Key: Creed
+    Name: The Creed
+    Type: local-md
+    Path: components/common/creed.md
+  - Key: Anaphora
+    Name: Anaphora
+    Type: library-pdf
+    Path: divine-liturgy/anaphora/anaphora.pdf
+  - Key: MagnificationInstructions
+    Name: Magnification Hymn
+    TocExempt: true
+    Type: local-md
+    Path: components/divine-liturgy/magnification.md
+  - Key: MagnificationStJohnChrysostom
+    Name: It is Truly Meet
+    Type: library-pdf
+    Path: divine-liturgy/magnification/st-john-chrysostom.pdf
+    Side: verso
+  - Key: MagnificationStBasil
+    Name: All of Creation Rejoices
+    Type: library-pdf
+    Path: divine-liturgy/magnification/st-basil.pdf
+    Side: verso
+  - Key: AndOfAllMankind
+    Name: And of All Mankind
+    TocExempt: true
+    Type: library-pdf
+    Path: divine-liturgy/lords-prayer/and-of-all-mankind.pdf
+  - Key: LordsPrayerLitany
+    Name: The Lord's Prayer
+    Type: local-md
+    Path: components/divine-liturgy/lords-prayer.md
+    Side: verso
+  - Key: LordsPrayer # TODO:is this a bad PDF for printing?
+    Name: The Lord's Prayer
+    TocExempt: true
+    Type: library-pdf
+    Path: divine-liturgy/lords-prayer/lords-prayer.pdf
+    Pages:
+      End: 1

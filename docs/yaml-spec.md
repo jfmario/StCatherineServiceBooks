@@ -103,9 +103,30 @@ Each `.md` file may begin with YAML front matter (parsed but not rendered). Comm
 
 | Field | Description |
 |-------|-------------|
-| `data` | Directory name for data YAML files (default: `data`) |
+| `data` | Directory name for data YAML files (used by `ref()`) |
+| `template` | Path to a Jinja template under `components/` (content file mode) |
+| `config` | Optional config mapping merged into the template `config` variable |
+| `as` | Template variable name for content (default: template filename stem, e.g. `psalm`) |
 
-Front matter keys are also passed into the Jinja template context as variables, alongside a `metadata` dict.
+When `template` is set, the file body becomes the `content` field on that variable; other front matter keys become additional fields (e.g. `number`, `repeat`).
+
+Project YAML may also supply **`Config`** on a component; it merges over front matter `config` (project wins).
+
+```yaml
+- Key: Psalm103
+  Name: Psalm 103
+  Type: local-md
+  Path: components/psalter/103.md
+  Config:
+    repeat: true
+    glory: true
+    alleluia: true
+    god_and_hope: true
+```
+
+Example: [`components/psalter/103.md`](../components/psalter/103.md) (content) rendered through [`components/psalter/psalm.md`](../components/psalter/psalm.md) (template).
+
+Without `template`, the file body is rendered directly as a Jinja template (see [`components/common/great-litany.md`](../components/common/great-litany.md)).
 
 #### Jinja templates
 
