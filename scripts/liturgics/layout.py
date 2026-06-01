@@ -147,7 +147,7 @@ def _build_slots(
                 page_number_map[len(slots)] = printed
             physical += 1
 
-    while len(slots) % 4 != 0:
+    while len(slots) % 2 != 0:
         slots.append(LayoutSlot(kind=PageKind.BLANK))
         physical += 1
 

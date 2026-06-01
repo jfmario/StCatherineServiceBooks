@@ -1,8 +1,8 @@
-Name: Vespers with an Entrance
+Name: Great Vespers
 Subtitle: St Catherine Orthodox Church
-Date: 2026-05-30
+Date: 2026-05-31
 
-Description: TODO
+Description: Vespers for Saturday evenings or on the eves of feast days.
 
 Filename: great-vespers.pdf
 
@@ -65,3 +65,59 @@ Components:
     Name: Saturday Evening Prokeimenon
     Type: library-pdf
     Path: vespers/prokeimenon/saturday.pdf
+  - Key: Readings
+    Name: Readings
+    Type: local-md
+    Path: components/common/readings.md
+    Config:
+      description: Readings may be appointed. If so, there are usually three Old Testament readings.
+  - Key: EkteniaResponses
+    Name: Ektenia Responses
+    TocExempt: true
+    Type: library-pdf
+    Path: common/ektenia-responses.pdf
+    Side: verso
+  - Key: Ektenia
+    Name: The Litany of Fervent Supplication
+    Type: local-md
+    Path: components/common/ektenia.md
+  - Key: EveningPrayer
+    Name: The Evening Prayer
+    Type: local-md
+    Path: components/vespers/evening-prayer.md
+  - Key: LitanyResponses2
+    Name: Litany Responses
+    TocExempt: true
+    Type: library-pdf
+    Path: common/litany-responses.pdf
+    Pages:
+      End: 1
+    Side: verso
+  - Key: Supplication
+    Name: The Litany of Supplication
+    Type: local-md
+    Path: components/vespers/supplication.md
+  - Key: Peace
+    Name: The Peace
+    Type: library-pdf
+    Path: vespers/peace/peace.pdf
+  - Key: Aposticha
+    Name: Aposticha
+    Type: local-md
+    Path: components/vespers/aposticha.md
+  - Key: StSimeonsPrayer
+    Name: St Simeon's Prayer
+    Type: library-pdf
+    Path: vespers/st-simeon/st-simeon.pdf
+  - Key: TrisagionPrayers
+    Name: Trisagion Prayers
+    Type: local-md
+    Path: components/common/trisagion-prayers.md
+  - Key: HymnsOfTheDay
+    Name: Hymns of the Day
+    Type: local-md
+    Path: components/vespers/hymns-of-the-day.md
+  - Key: Dismissal
+    Name: Dismissal
+    Type: local-md
+    Path: components/vespers/dismissal.md

@@ -175,7 +175,7 @@ Components:
     Type: local-md
     Path: components/divine-liturgy/lords-prayer.md
     Side: verso
-  - Key: LordsPrayer # TODO:is this a bad PDF for printing?
+  - Key: LordsPrayer # TODO: is this a bad PDF for printing?
     Name: The Lord's Prayer
     TocExempt: true
     Type: library-pdf

@@ -157,7 +157,7 @@ When pages are laid out sequentially in the PDF, each leaf contributes two pages
 
 When the booklet is open, recto pages appear on the right and verso pages on the left (Western convention).
 
-- The **cover** is physical page 1 (recto — the front of the first leaf). It is not numbered.
+- The **cover** is physical page 1 (recto — the front of the first leaf). It shows the project `Name`, `Subtitle`, and a build revision date (`Revision: MMM DD, YYYY`). It is not numbered.
 - A **blank verso page** is inserted immediately after the cover (physical page 2 — the back of the cover leaf). It is not numbered.
 - The **table of contents** follows. TOC pages are not numbered.
 - **Printed page 1** is always on a **recto** page — the first recto after the TOC ends. A blank recto is inserted after the TOC when necessary.
@@ -173,7 +173,7 @@ For the **first** component with `Side: verso`, a blank recto (printed page 1) i
 
 ### Signature padding
 
-Blank pages are appended at the end of the document so the total page count (cover, TOC, content, and padding) is divisible by **4**, suitable for booklet printing.
+Blank pages are appended at the end of the document so the total page count (cover, TOC, content, and padding) is divisible by **2** — ensuring the booklet ends on a verso page.
 
 ## Table of contents
 
@@ -221,6 +221,19 @@ path.write_bytes(out.getvalue())
 ```
 
 Then build with a YAML file that references `fixtures/sample.pdf` as a `local-pdf` component.
+
+## Continuous integration
+
+Pushes to `main` run [`.github/workflows/build-release.yml`](../.github/workflows/build-release.yml), which builds every project in `projects/` except `test-*.yaml` and publishes the PDFs as a GitHub release.
+
+Required repository configuration:
+
+| Setting | Type | Purpose |
+|---------|------|---------|
+| `AWS_ACCESS_KEY_ID` | Secret | S3 access for `library-pdf` components |
+| `AWS_SECRET_ACCESS_KEY` | Secret | S3 access for `library-pdf` components |
+| `LITURGICS_LIBRARY_BUCKET` | Variable | S3 bucket name (e.g. `sacred-music-lib`) |
+| `AWS_REGION` | Variable | Optional; defaults to `us-east-1` |
 
 ## YAML formatting
 
