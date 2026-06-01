@@ -182,3 +182,7 @@ Components:
     Path: divine-liturgy/lords-prayer/lords-prayer.pdf
     Pages:
       End: 1
+  - Key: Peace
+    Name: The Peace
+    Type: library-pdf
+    Path: divine-liturgy/peace/peace.pdf
