@@ -226,14 +226,16 @@ Then build with a YAML file that references `fixtures/sample.pdf` as a `local-pd
 
 Pushes to `main` run [`.github/workflows/build-release.yml`](../.github/workflows/build-release.yml), which builds every project in `projects/` except `test-*.yaml` and publishes the PDFs as a GitHub release.
 
-Required repository configuration:
+Required repository configuration (Settings → Secrets and variables → Actions):
 
 | Setting | Type | Purpose |
 |---------|------|---------|
-| `AWS_ACCESS_KEY_ID` | Secret | S3 access for `library-pdf` components |
-| `AWS_SECRET_ACCESS_KEY` | Secret | S3 access for `library-pdf` components |
-| `LITURGICS_LIBRARY_BUCKET` | Variable | S3 bucket name (e.g. `sacred-music-lib`) |
-| `AWS_REGION` | Variable | Optional; defaults to `us-east-1` |
+| `AWS_ACCESS_KEY_ID` | **Secret** | S3 access for `library-pdf` components |
+| `AWS_SECRET_ACCESS_KEY` | **Secret** | S3 access for `library-pdf` components |
+| `LITURGICS_LIBRARY_BUCKET` | **Secret** or **Variable** | S3 bucket name (e.g. `sacred-music-lib`) |
+| `AWS_REGION` | Variable or **Secret** | Optional; defaults to `us-east-1` |
+
+No extra workflow permissions are needed beyond `contents: write` — secrets and variables are available to the job when referenced in the workflow file. If the bucket name error appears, the value is usually missing or was added under the wrong type (secret vs variable).
 
 ## YAML formatting
 

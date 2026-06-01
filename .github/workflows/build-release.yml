@@ -10,8 +10,8 @@ permissions:
   contents: write
 
 env:
-  LITURGICS_LIBRARY_BUCKET: ${{ vars.LITURGICS_LIBRARY_BUCKET }}
-  AWS_REGION: ${{ vars.AWS_REGION || 'us-east-1' }}
+  LITURGICS_LIBRARY_BUCKET: ${{ secrets.LITURGICS_LIBRARY_BUCKET || vars.LITURGICS_LIBRARY_BUCKET }}
+  AWS_REGION: ${{ vars.AWS_REGION || secrets.AWS_REGION || 'us-east-1' }}
 
 jobs:
   build-and-release:
@@ -33,6 +33,37 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
+
+      - name: Verify build configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          missing=0
+
+          if [[ -z "${LITURGICS_LIBRARY_BUCKET:-}" ]]; then
+            echo "::error::LITURGICS_LIBRARY_BUCKET is not set."
+            echo "Add it under Settings → Secrets and variables → Actions:"
+            echo "  - Repository secret: LITURGICS_LIBRARY_BUCKET (recommended), or"
+            echo "  - Repository variable: LITURGICS_LIBRARY_BUCKET"
+            missing=1
+          fi
+
+          if [[ -z "${{ secrets.AWS_ACCESS_KEY_ID }}" ]]; then
+            echo "::error::AWS_ACCESS_KEY_ID secret is not set."
+            missing=1
+          fi
+
+          if [[ -z "${{ secrets.AWS_SECRET_ACCESS_KEY }}" ]]; then
+            echo "::error::AWS_SECRET_ACCESS_KEY secret is not set."
+            missing=1
+          fi
+
+          if [[ "$missing" -ne 0 ]]; then
+            exit 1
+          fi
+
+          echo "Using S3 bucket: ${LITURGICS_LIBRARY_BUCKET}"
+          echo "Using AWS region: ${AWS_REGION}"
 
       - name: Install Python dependencies
         run: |
