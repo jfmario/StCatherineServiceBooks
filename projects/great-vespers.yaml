@@ -121,3 +121,5 @@ Components:
     Name: Dismissal
     Type: local-md
     Path: components/vespers/dismissal.md
+
+# TODO: Instructions on first page about variables.

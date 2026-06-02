@@ -1,0 +1,61 @@
+Name: Typika (without Sacrament)
+Subtitle: St Catherine Orthodox Church
+
+Description: Typika service without a priest or sacrament.
+
+Filename: typika.pdf
+
+Components:
+  - Key: TrisagionPrayers
+    Name: Trisagion Prayers
+    Type: local-md
+    Path: components/readers/open.md
+  - Key: Psalm102 # TODO: instruction to stop at after line 20
+    Name: Psalm 102
+    Type: library-pdf
+    Path: typika/psalms/psalm-102.pdf
+  - Key: Psalm145 
+    Name: Psalm 145
+    Type: library-pdf
+    Path: typika/psalms/psalm-145.pdf
+  - Key: Beatitudes
+    Name: The Beatitudes
+    Type: library-pdf
+    Path: divine-liturgy/antiphons/beatitudes.pdf
+    Side: verso
+  - Key: Epistle
+    Name: Epistle
+    Type: local-md
+    Path: components/typika/epistle.md
+  - Key: Alleluia
+    Name: Alleluia
+    Type: library-pdf
+    Path: divine-liturgy/epistle-gospel/alleluia-verses.pdf
+  - Key: Gospel
+    Name: Gospel
+    Type: local-md
+    Path: components/typika/gospel.md
+  - Key: Creed
+    Name: Creed
+    Type: local-md
+    Path: components/common/creed.md
+  - Key: LordsPrayer
+    Name: The Lord's Prayer
+    Type: local-md
+    Path: components/typika/lords-prayer.md
+    Side: verso
+  - Key: LordsPrayerMusic # TODO: is this a bad PDF for printing?
+    Name: The Lord's Prayer
+    TocExempt: true
+    Type: library-pdf
+    Path: divine-liturgy/lords-prayer/lords-prayer.pdf
+    Pages:
+      End: 1
+  - Key: Kontakion
+    Name: Kontakion
+    Type: library-pdf
+    Path: divine-liturgy/kontakion/kontakion-ordinary.pdf
+    Side: verso
+  # TODO: Lord, have mercy (40x)
+
+# TODO: Instructions on first page about variables.
