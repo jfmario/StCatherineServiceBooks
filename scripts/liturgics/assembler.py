@@ -6,7 +6,7 @@ from pathlib import Path
 from pypdf import PdfReader, PdfWriter
 
 from liturgics.cover import build_cover_pdf
-from liturgics.models import Config, LayoutPlan, PageKind, Project, ResolvedComponent
+from liturgics.models import Config, LayoutPlan, PageKind, Project, ResolvedComponent, ResolvedInstructions
 from liturgics.page_numbers import add_page_numbers, blank_page_bytes
 from liturgics.toc import render_toc_pdf
 
@@ -26,10 +26,16 @@ def assemble_pdf(
     resolved: list[ResolvedComponent],
     plan: LayoutPlan,
     config: Config,
+    instructions: ResolvedInstructions | None = None,
 ) -> bytes:
     writer = PdfWriter()
     blank = blank_page_bytes()
     cover = build_cover_pdf(project.name, project.subtitle)
+
+    instructions_reader = (
+        PdfReader(str(instructions.pdf_path)) if instructions is not None else None
+    )
+    instructions_page_index = 0
 
     toc_path = config.cache_dir / "toc-temp.pdf"
     render_toc_pdf(plan.toc_entries, output_path=toc_path)
@@ -42,6 +48,13 @@ def assemble_pdf(
     for slot_index, slot in enumerate(plan.slots, start=1):
         if slot.kind == PageKind.COVER:
             _append_pdf_bytes(writer, cover)
+        elif slot.kind == PageKind.INSTRUCTIONS:
+            if instructions_reader is None:
+                raise ValueError(f"Instructions slot at position {slot_index} but no instructions PDF")
+            if instructions_page_index >= len(instructions_reader.pages):
+                raise ValueError("Instructions PDF has fewer pages than planned")
+            _append_pdf_page(writer, instructions_reader, instructions_page_index)
+            instructions_page_index += 1
         elif slot.kind == PageKind.TOC:
             if toc_page_index >= len(toc_reader.pages):
                 raise ValueError("TOC PDF has fewer pages than planned")

@@ -41,7 +41,14 @@ class Project:
     filename: str
     subtitle: str | None = None
     description: str | None = None
+    instructions: str | None = None
     components: tuple[Component, ...] = ()
+
+
+@dataclass(frozen=True)
+class ResolvedInstructions:
+    pdf_path: Path
+    page_count: int
 
 
 @dataclass(frozen=True)
@@ -59,6 +66,7 @@ class TocEntry:
 
 class PageKind(str, Enum):
     COVER = "cover"
+    INSTRUCTIONS = "instructions"
     TOC = "toc"
     BLANK = "blank"
     COMPONENT = "component"

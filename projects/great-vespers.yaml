@@ -6,6 +6,8 @@ Description: Vespers for Saturday evenings or on the eves of feast days.
 
 Filename: great-vespers.pdf
 
+Instructions: components/instructions/great-vespers.md
+
 Components:
   - Key: ComeLetUsWorship
     Name: Come, Let Us Worship

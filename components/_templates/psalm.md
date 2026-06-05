@@ -12,7 +12,9 @@ Glory to the Father and to the Son and to the Holy Spirit; both now and ever and
 
 {% if config.alleluia %}
 Alleluia. Alleluia. Alleluia. Glory to Thee, O God.
+
 Alleluia. Alleluia. Alleluia. Glory to Thee, O God.
+
 Alleluia. Alleluia. Alleluia. Glory to Thee, O God.
 {% endif %}
 

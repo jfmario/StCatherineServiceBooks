@@ -22,6 +22,7 @@ Output is written to `out/{Filename}`. Environment variables are read from the p
 | `Subtitle` | No | Subtitle shown below the title on the cover |
 | `Description` | No | Metadata only; not rendered in the PDF (v1) |
 | `Filename` | Yes | Output filename, written to `out/{Filename}` |
+| `Instructions` | No | Path to a markdown instructions file, rendered before the TOC (unnumbered, starts on recto) |
 | `Components` | Yes | Ordered list of content blocks |
 
 ### Example
@@ -159,7 +160,8 @@ When the booklet is open, recto pages appear on the right and verso pages on the
 
 - The **cover** is physical page 1 (recto — the front of the first leaf). It shows the project `Name`, `Subtitle`, and a build revision date (`Revision: MMM DD, YYYY`). It is not numbered.
 - A **blank verso page** is inserted immediately after the cover (physical page 2 — the back of the cover leaf). It is not numbered.
-- The **table of contents** follows. TOC pages are not numbered.
+- If **`Instructions`** is set, the instructions pages follow on recto (physical page 3 onward). They are not numbered.
+- The **table of contents** follows the instructions (or the blank verso page if no instructions). TOC pages are not numbered.
 - **Printed page 1** is always on a **recto** page — the first recto after the TOC ends. A blank recto is inserted after the TOC when necessary.
 - **Odd printed pages are recto; even printed pages are verso.**
 - If the first component must start on **verso** (`Side: verso`), a blank recto (printed page 1) is inserted before it; the component begins on the following verso (printed page 2).

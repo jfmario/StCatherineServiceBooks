@@ -7,6 +7,7 @@ from pypdf import PdfReader, PdfWriter
 
 from liturgics.assembler import assemble_pdf
 from liturgics.config import find_project_root, load_env
+from liturgics.instructions import resolve_instructions
 from liturgics.layout import plan_layout
 from liturgics.loader import load_project
 from liturgics.models import Config
@@ -22,8 +23,10 @@ def build_project(yaml_path: Path, project_root: Path | None = None) -> Path:
 
     project = load_project(yaml_path)
     resolved = resolve_components(project, config)
-    layout = plan_layout(resolved)
-    pdf_bytes = assemble_pdf(project, resolved, layout, config)
+    instructions = resolve_instructions(project, config)
+    instructions_pages = instructions.page_count if instructions else 0
+    layout = plan_layout(resolved, instructions_page_count=instructions_pages)
+    pdf_bytes = assemble_pdf(project, resolved, layout, config, instructions)
 
     output_path = config.out_dir / project.filename
     output_path.write_bytes(pdf_bytes)

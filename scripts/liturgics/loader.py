@@ -124,6 +124,7 @@ def load_project(yaml_path: Path) -> Project:
     filename = _require_str(data, "Filename", "Project")
     subtitle = _optional_str(data, "Subtitle")
     description = _optional_str(data, "Description")
+    instructions = _optional_str(data, "Instructions")
 
     raw_components = data.get("Components")
     if not isinstance(raw_components, list) or not raw_components:
@@ -139,5 +140,6 @@ def load_project(yaml_path: Path) -> Project:
         filename=filename,
         subtitle=subtitle,
         description=description,
+        instructions=instructions,
         components=components,
     )

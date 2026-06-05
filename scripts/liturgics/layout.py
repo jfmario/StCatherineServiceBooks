@@ -97,6 +97,7 @@ def _prepare_first_component(
 def _build_slots(
     resolved: list[ResolvedComponent],
     toc_page_count: int,
+    instructions_page_count: int = 0,
 ) -> tuple[list[LayoutSlot], list[TocEntry], dict[int, int]]:
     slots: list[LayoutSlot] = []
     toc_entries: list[TocEntry] = []
@@ -104,10 +105,13 @@ def _build_slots(
     slots.append(LayoutSlot(kind=PageKind.COVER))
     slots.append(LayoutSlot(kind=PageKind.BLANK))  # blank verso (back of cover leaf)
 
+    for _ in range(instructions_page_count):
+        slots.append(LayoutSlot(kind=PageKind.INSTRUCTIONS))
+
     for _ in range(toc_page_count):
         slots.append(LayoutSlot(kind=PageKind.TOC))
 
-    toc_end = 2 + toc_page_count
+    toc_end = 2 + instructions_page_count + toc_page_count
     first_numbered = first_recto_after(toc_end)
     physical = toc_end + 1
 
@@ -154,12 +158,17 @@ def _build_slots(
     return slots, toc_entries, page_number_map
 
 
-def plan_layout(resolved: list[ResolvedComponent]) -> LayoutPlan:
+def plan_layout(
+    resolved: list[ResolvedComponent],
+    instructions_page_count: int = 0,
+) -> LayoutPlan:
     toc_entry_count = sum(1 for item in resolved if not item.component.toc_exempt)
     toc_pages = estimate_toc_pages(toc_entry_count)
 
     for _ in range(5):
-        slots, toc_entries, page_number_map = _build_slots(resolved, toc_pages)
+        slots, toc_entries, page_number_map = _build_slots(
+            resolved, toc_pages, instructions_page_count
+        )
         actual_toc_pages = render_toc_pdf(toc_entries, measure_only=True)
         if actual_toc_pages == toc_pages:
             return LayoutPlan(
@@ -169,6 +178,9 @@ def plan_layout(resolved: list[ResolvedComponent]) -> LayoutPlan:
             )
         toc_pages = actual_toc_pages
 
+    slots, toc_entries, page_number_map = _build_slots(
+        resolved, toc_pages, instructions_page_count
+    )
     return LayoutPlan(
         slots=tuple(slots),
         toc_entries=tuple(toc_entries),
