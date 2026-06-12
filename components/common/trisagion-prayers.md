@@ -1,7 +1,9 @@
 ## Trisagion Prayers
 
 Holy God, Holy Mighty, Holy Immortal, have mercy on us.
+
 Holy God, Holy Mighty, Holy Immortal, have mercy on us.
+
 Holy God, Holy Mighty, Holy Immortal, have mercy on us.
 
 Glory to the Father and to the Son and to the Holy Spirit; both now and ever, and unto ages of ages. Amen.

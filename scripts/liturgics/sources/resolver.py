@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from liturgics.models import ComponentType, Config, Project, ResolvedComponent
+from liturgics.sources.blank_page import resolve_blank_page
 from liturgics.sources.library_pdf import resolve_library_pdf
 from liturgics.sources.local_md import resolve_local_md
 from liturgics.sources.local_pdf import resolve_local_pdf
@@ -15,6 +16,8 @@ def resolve_components(project: Project, config: Config) -> list[ResolvedCompone
             resolved.append(resolve_library_pdf(component, config))
         elif component.type == ComponentType.LOCAL_MD:
             resolved.append(resolve_local_md(component, config))
+        elif component.type == ComponentType.BLANK_PAGE:
+            resolved.append(resolve_blank_page(component, config))
         else:
             raise ValueError(f"Unsupported component type: {component.type}")
     return resolved

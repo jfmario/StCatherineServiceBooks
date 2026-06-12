@@ -1,7 +1,7 @@
 Name: Episcopal Visit Guide
-Subtitle: TBD
+Subtitle: St Catherine Orthodox Church
 
-Description: TODO
+Description: Guidance and music for visits from the bishop.
 
 Filename: episcopal.pdf
 
@@ -10,6 +10,10 @@ Components:
     Name: Rubrics for a Hierarchical Divine Liturgy
     Type: library-pdf
     Path: hierarchical/rubrics.pdf
+  - Key: Prerogatives
+    Name: Episcopal Prerogatives
+    Type: library-pdf
+    Path: hierarchical/prerogatives.pdf
   - Key: Reception
     Name: Reception of the Bishop
     Type: library-pdf
@@ -20,10 +24,6 @@ Components:
     TocExempt: true
     Type: library-pdf
     Path: hierarchical/bishop-reception.pdf
-  - Key: Prerogatives
-    Name: Episcopal Prerogatives
-    Type: library-pdf
-    Path: hierarchical/prerogatives.pdf
   - Key: TonDhespotin
     Name: Ton Dhespotin
     Type: library-pdf
@@ -34,7 +34,13 @@ Components:
     Name: Phimi of the Metropolitan
     Type: library-pdf
     Path: hierarchical/metropolitan-phimi.pdf
-  - Key: Polychronion
+  - Key: Polychronion # source of font error
     Name: Polychronion of the Metropolitan
     Type: library-pdf
     Path: hierarchical/metropolitan-polychronion.pdf
+    Pages:
+      End: 1
+  - Key: End
+    Name: End
+    TocExempt: true
+    Type: blank-page

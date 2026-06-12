@@ -10,6 +10,7 @@ class ComponentType(str, Enum):
     LIBRARY_PDF = "library-pdf"
     LOCAL_PDF = "local-pdf"
     LOCAL_MD = "local-md"
+    BLANK_PAGE = "blank-page"
 
 
 class Side(str, Enum):
@@ -28,7 +29,7 @@ class Component:
     key: str
     name: str
     type: ComponentType
-    path: str
+    path: str | None = None
     toc_exempt: bool = False
     pages: PageRange | None = None
     side: Side | None = None

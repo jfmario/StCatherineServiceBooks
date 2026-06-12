@@ -72,7 +72,12 @@ def _parse_component(raw: object, index: int) -> Component:
             f"{context}: 'Type' must be one of: {allowed}"
         ) from exc
 
-    path = _require_str(raw, "Path", context)
+    if component_type == ComponentType.BLANK_PAGE:
+        path = _optional_str(raw, "Path")
+        if raw.get("Path") is not None and path is None:
+            raise YamlValidationError(f"{context}: 'Path' must be a string when provided")
+    else:
+        path = _require_str(raw, "Path", context)
 
     toc_exempt = raw.get("TocExempt", False)
     if not isinstance(toc_exempt, bool):
