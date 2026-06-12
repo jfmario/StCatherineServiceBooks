@@ -1,0 +1,40 @@
+Name: Episcopal Visit Guide
+Subtitle: TBD
+
+Description: TODO
+
+Filename: episcopal.pdf
+
+Components:
+  - Key: HierarchicalRubric
+    Name: Rubrics for a Hierarchical Divine Liturgy
+    Type: library-pdf
+    Path: hierarchical/rubrics.pdf
+  - Key: Reception
+    Name: Reception of the Bishop
+    Type: library-pdf
+    Path: hierarchical/reception-instructions.pdf
+    Side: recto
+  - Key: ReceptionResponses
+    Name: Reception of the Bishop
+    TocExempt: true
+    Type: library-pdf
+    Path: hierarchical/bishop-reception.pdf
+  - Key: Prerogatives
+    Name: Episcopal Prerogatives
+    Type: library-pdf
+    Path: hierarchical/prerogatives.pdf
+  - Key: TonDhespotin
+    Name: Ton Dhespotin
+    Type: library-pdf
+    Path: hierarchical/ton-dhespotin.pdf
+    Pages:
+      End: 1
+  - Key: Phimi
+    Name: Phimi of the Metropolitan
+    Type: library-pdf
+    Path: hierarchical/metropolitan-phimi.pdf
+  - Key: Polychronion
+    Name: Polychronion of the Metropolitan
+    Type: library-pdf
+    Path: hierarchical/metropolitan-polychronion.pdf

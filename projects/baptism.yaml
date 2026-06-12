@@ -1,0 +1,42 @@
+Name: Baptism & Chrismation
+Subtitle: TBD
+
+Description: TODO
+
+Filename: baptism.pdf
+
+Components:
+  - Key: LitanyResponses
+    Name: Litany Responses
+    TocExempt: true
+    Type: library-pdf
+    Path: common/litany-responses.pdf
+    Pages:
+      End: 1
+    Side: verso
+  - Key: FirstPrayer
+    Name: Opening Prayer
+    Type: local-md
+    Path: components/baptism/first-prayer.md
+  - Key: Exorcism
+    Name: Prayers of Exorcism
+    Type: local-md
+    Path: components/baptism/exorcism.md
+  - Key: Renunciation
+    Name: Prayer & Renunciation
+    Type: local-md
+    Path: components/baptism/renunciation.md
+  - Key: Creed
+    Name: The Creed
+    Type: local-md
+    Path: components/common/creed.md
+  - Key: Alignment
+    Name: Alignment with Christ & Prayer
+    Type: local-md
+    Path: components/baptism/alignment.md
+  - Key: TheophanyHymn
+    Name: Theophany Hymn
+    Type: library-pdf
+    Path: menaion/01/06/theophany.pdf
+    Pages:
+      End: 1
