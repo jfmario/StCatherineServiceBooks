@@ -26,3 +26,7 @@ Components:
     TocExempt: true
     Type: library-pdf
     Path: menaion/09/14/cross.pdf
+  - Key: Litany
+    Name: Litany
+    Type: local-md
+    Path: components/orthros/litany.md
