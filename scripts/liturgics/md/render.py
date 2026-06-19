@@ -9,6 +9,16 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
 _RESERVED_KEYS = frozenset({"template", "config", "data", "as"})
 
+_CONFIG_DEFAULTS: dict[str, Any] = {
+    "alleluia": False,
+    "description": "",
+    "enarxis": False,
+    "glory": False,
+    "god_and_hope": False,
+    "lord_have_mercy_glory": False,
+    "repeat": False,
+}
+
 
 def _load_data_file(data_dir: Path, name: str) -> dict[str, Any]:
     path = data_dir / f"{name}.yaml"
@@ -28,7 +38,7 @@ def _merge_config(
     front_matter: dict[str, Any],
     component_config: dict[str, Any] | None,
 ) -> dict[str, Any]:
-    merged: dict[str, Any] = {}
+    merged = dict(_CONFIG_DEFAULTS)
     raw = front_matter.get("config")
     if isinstance(raw, dict):
         merged.update(raw)

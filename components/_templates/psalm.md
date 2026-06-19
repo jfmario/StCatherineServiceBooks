@@ -20,5 +20,13 @@ Alleluia. Alleluia. Alleluia. Glory to Thee, O God.
 
 {% if config.god_and_hope %}
 O our God and our Hope, glory to Thee!
+{% elif config.lord_have_mercy_glory %}
+Lord, have mercy.
+
+Lord, have mercy.
+
+Lord, have mercy.
+
+Glory to the Father and to the Son and to the Holy Spirit; both now and ever and unto ages of ages. Amen.
 {% endif %}
 

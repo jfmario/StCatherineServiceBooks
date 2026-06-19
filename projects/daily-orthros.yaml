@@ -21,6 +21,7 @@ Components:
     Name: Introduction
     Type: local-md
     Path: components/orthros/introduction.md
+    Side: verso
   - Key: Cross
     Name: Apolytikion of the Cross
     TocExempt: true
@@ -30,3 +31,65 @@ Components:
     Name: Litany
     Type: local-md
     Path: components/orthros/litany.md
+  - Key: Psalm3
+    Name: Psalm 3
+    Type: local-md
+    Path: components/psalter/3.md
+    Config:
+      repeat: true
+  - Key: Psalm37
+    Name: Psalm 37
+    Type: local-md
+    Path: components/psalter/37.md
+    Config:
+      repeat: true
+  - Key: Psalm62
+    Name: Psalm 62
+    Type: local-md
+    Path: components/psalter/62.md
+    Config:
+      repeat: true
+      glory: true
+      alleluia: true
+      lord_have_mercy_glory: true
+  - Key: Psalm87
+    Name: Psalm 87
+    Type: local-md
+    Path: components/psalter/87.md
+    Config:
+      repeat: true
+  - Key: Psalm102
+    Name: Psalm 102
+    Type: local-md
+    Path: components/psalter/102.md
+    Config:
+      repeat: true
+  - Key: Psalm142
+    Name: Psalm 142
+    Type: local-md
+    Path: components/psalter/142.md
+    Config:
+      repeat: true
+      glory: true
+      alleluia: true
+      god_and_hope: true
+  - Key: LitanyResponses
+    Name: Litany Responses
+    TocExempt: true
+    Type: library-pdf
+    Path: common/litany-responses.pdf
+    Pages:
+      End: 1
+    Side: verso
+  - Key: LitanyOfPeace
+    Name: Litany of Peace
+    Type: local-md
+    Path: components/common/great-litany.md
+    Config:
+      enarxis: false
+  - Key: GodIsTheLord
+    Name: God Is the Lord
+    Type: library-pdf
+    Path: orthros/god-is-the-lord/god-is-the-lord-tone-6.pdf
+    Pages:
+      End: 1

@@ -1,4 +1,6 @@
 
+O Lord, save Thy people and bless Thine inheritance, granting to Thy people victory over all their enemies, and by the power of Thy Cross preserving those who honor Thee.
+
 *Glory to the Father, and to the Son, and to the Holy Spirit.*
 
 Do Thou, Who of Thine own good will wast lifted up upon the Cross, O Christ our God, bestow
