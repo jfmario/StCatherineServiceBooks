@@ -87,8 +87,14 @@ Components:
     Path: components/common/great-litany.md
     Config:
       enarxis: false
+  - Key: GodIsTheLordInstructions
+    Name: God is the Lord Instructions
+    TocExempt: true
+    Type: local-md
+    Path: components/orthros/god-is-the-lord.md
+    Side: verso
   - Key: GodIsTheLord
-    Name: God Is the Lord
+    Name: God is the Lord
     Type: library-pdf
     Path: orthros/god-is-the-lord/god-is-the-lord-tone-6.pdf
     Pages:
