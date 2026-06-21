@@ -71,7 +71,19 @@ def _bullet_text(line: str) -> str:
     return line.strip()
 
 
-def _parse_blocks(markdown: str) -> list[tuple[str, str | list[str]]]:
+def _leading_whitespace(line: str) -> int:
+    return len(line) - len(line.lstrip())
+
+
+def _list_nesting_levels(items: list[tuple[int, str]]) -> list[tuple[int, str]]:
+    if not items:
+        return []
+    unique_indents = sorted({indent for indent, _ in items})
+    level_by_indent = {indent: level for level, indent in enumerate(unique_indents)}
+    return [(level_by_indent[indent], text) for indent, text in items]
+
+
+def _parse_blocks(markdown: str) -> list[tuple[str, str | list[str] | list[tuple[int, str]]]]:
     blocks: list[tuple[str, str | list[str]]] = []
     lines = markdown.strip().splitlines()
     index = 0
@@ -94,18 +106,18 @@ def _parse_blocks(markdown: str) -> list[tuple[str, str | list[str]]]:
             continue
 
         if _is_bullet_line(stripped):
-            items: list[str] = []
+            items: list[tuple[int, str]] = []
             while index < len(lines):
-                current = lines[index].strip()
+                raw = lines[index]
+                current = raw.strip()
                 if not current:
                     index += 1
                     break
-                if _is_bullet_line(current):
-                    items.append(_bullet_text(current))
-                    index += 1
-                    continue
-                break
-            blocks.append(("bullet_list", items))
+                if not _is_bullet_line(current):
+                    break
+                items.append((_leading_whitespace(raw), _bullet_text(current)))
+                index += 1
+            blocks.append(("bullet_list", _list_nesting_levels(items)))
             continue
 
         if _LITERAL_NUMBERED_PATTERN.match(stripped):
@@ -210,11 +222,23 @@ def markdown_to_pdf(markdown: str) -> bytes:
         elif kind == "paragraph":
             story.append(Paragraph(_inline_markup(str(content)), body_style))
         elif kind == "bullet_list":
-            for item in content:
+            for level, item in content:
+                extra = level * LIST_INDENT
+                style = (
+                    bullet_style
+                    if level == 0
+                    else ParagraphStyle(
+                        name=f"BulletNested{level}",
+                        parent=body_style,
+                        leftIndent=LIST_INDENT + extra,
+                        bulletIndent=BULLET_INDENT + extra,
+                        spaceAfter=BODY_SPACE_AFTER / 2,
+                    )
+                )
                 story.append(
                     Paragraph(
                         f'<bullet>&bull;</bullet>{_inline_markup(item)}',
-                        bullet_style,
+                        style,
                     )
                 )
             story.append(Spacer(1, BODY_SPACE_AFTER / 2))
