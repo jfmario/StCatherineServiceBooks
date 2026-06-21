@@ -99,3 +99,23 @@ Components:
     Path: orthros/god-is-the-lord/god-is-the-lord-tone-6.pdf
     Pages:
       End: 1
+  - Key: HymnsAfterGodIsTheLordDaily
+    Name: Hymns after God is the Lord
+    Type: local-md
+    Path: components/orthros/hymns-after-god-is-the-lord-daily.md
+  - Key: LittleLitany
+    Name: The Little Litany
+    Type: local-md
+    Path: components/divine-liturgy/little-litany-1.md
+  - Key: SessionalHymns
+    Name: Sessional Hymns
+    Type: local-md
+    Path: components/orthros/sessional-hymns.md
+  - Key: Psalm50
+    Name: Psalm 50
+    Type: local-md
+    Path: components/psalter/50.md
+  - Key: KontakionOikos
+    Name: Kontakion and Oikos
+    Type: local-md
+    Path: components/orthros/kontakion-oikos.md

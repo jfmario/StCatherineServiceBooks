@@ -1,6 +1,6 @@
 ## Hymns of the Day
 
-*Sing the appropriate hymns of the day. The usual pattern follows:*
+*Sing the appropriate hymns of the day, based on appointed rubrics. The usual pattern follows:*
 
 - Resurrection Hymn for the Tone of the Week
 - Other Festal Hymns
