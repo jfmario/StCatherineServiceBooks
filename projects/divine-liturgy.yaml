@@ -186,5 +186,29 @@ Components:
     Name: The Peace
     Type: library-pdf
     Path: divine-liturgy/peace/peace.pdf
+  - Key: OneIsHoly
+    Name: One Is Holy
+    Type: library-pdf
+    Path: divine-liturgy/one-is-holy/one-is-holy.pdf
+  - Key: PreCommunionPrayers
+    Name: Pre-Communion Prayers
+    Type: local-md
+    Path: components/divine-liturgy/pre-communion-prayers.md
+  - Key: CommunionHymn
+    Name: Communion Hymn
+    Type: library-pdf
+    Path: divine-liturgy/communion-hymn/communion-hymns.pdf
+    Pages:
+      Start: 18
+      End: 18
+    Side: verso
+  - Key: CommunionAlleluia
+    Name: Communion Alleluia
+    TocExempt: true
+    Type: library-pdf
+    Path: divine-liturgy/communion-hymn/communion-hymns.pdf
+    Pages:
+      Start: 3
+      End: 3
 
 # TODO: Instructions on first page about variables.
