@@ -1,7 +1,7 @@
 Name: Divine Liturgy
-Subtitle: TBD
+Subtitle: St Catherine Orthodox Church
 
-Description: TODO
+Description: The Divine Liturgy of St John Chrysostom or of St Basil, as celebrated at St Catherine Orthodox Church.
 
 Filename: divine-liturgy.pdf
 
@@ -210,5 +210,43 @@ Components:
     Pages:
       Start: 3
       End: 3
+  - Key: BlessedIsHe
+    Name: Communion of the Faithful
+    Type: library-pdf
+    Path: divine-liturgy/communion-faithful/blessed-is-he.pdf
+  - Key: DefaultCommunionHymn
+    Name: Receive the Body of Christ
+    Type: library-pdf
+    Path: divine-liturgy/communion-faithful/receive-the-body-of-christ.pdf
+    Side: verso
+  - Key: John6Verses
+    Name: John 6 Verses
+    TocExempt: true
+    Type: local-md
+    Path: components/verses/john-6.md
+  - Key: TrueLight
+    Name: We Have Seen the True Light
+    Type: library-pdf
+    Path: divine-liturgy/post-communion/true-light.pdf
+  - Key: LetOurMouthBeFilled
+    Name: Let Our Mouth Be Filled
+    Type: library-pdf
+    Path: divine-liturgy/post-communion/let-our-mouth-be-filled.pdf
+  - Key: PostCommunionLitany
+    Name: Post-Communion Litany
+    Type: local-md
+    Path: components/divine-liturgy/post-communion-litany.md
+  - Key: Amvon
+    Name: Prayer behind the Amvon
+    Type: library-pdf
+    Path: divine-liturgy/post-communion/amvon.pdf
+  - Key: BlessedBeTheName
+    Name: Blessed be the Name
+    Type: library-pdf
+    Path: divine-liturgy/post-communion/blessed-be-the-name.pdf
+  - Key: Dismissal
+    Name: Dismissal
+    Type: local-md
+    Path: components/divine-liturgy/dismissal.md
 
 # TODO: Instructions on first page about variables.
