@@ -1,4 +1,6 @@
 
+## Dismissal
+
 Priest/Deacon: Let us pray to the Lord.
 
 People/Choir: Lord, have mercy.
