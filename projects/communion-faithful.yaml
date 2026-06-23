@@ -1,0 +1,83 @@
+Name: Communion of the Faithful
+Subtitle: St Catherine Orthodox Church
+
+Description: Hymns for the Communion of the Faithful.
+
+Filename: communion-faithful.pdf
+
+Components:
+  - Key: ANewCommandment
+    Name: A New Commandment
+    Type: library-pdf
+    Path: divine-liturgy/communion-faithful/a-new-commandment.pdf
+  - Key: BlessedIsTheMan
+    Name: Blessed is the Man
+    Type: library-pdf
+    Path: divine-liturgy/communion-faithful/blessed-is-the-man.pdf
+    Side: verso
+  - Key: IWillReceiveTheCupOfSalvation
+    Name: I Will Receive the Cup of Salvation
+    Type: library-pdf
+    Path: divine-liturgy/communion-faithful/i-will-receive-the-cup-of-salvation.pdf
+  - Key: OPureVirgin
+    Name: O Pure Virgin
+    Type: library-pdf
+    Path: divine-liturgy/communion-faithful/o-pure-virgin.pdf
+    Side: verso
+  - Key: Psalm135
+    Name: Psalm 135
+    Type: library-pdf
+    Path: orthros/polyeleos/psalm-135.pdf
+    Side: verso
+  - Key: ReceiveMeToday
+    Name: Receive Me Today
+    Type: library-pdf
+    Path: divine-liturgy/communion-hymn/communion-hymns.pdf
+    Pages:
+      Start: 15
+      End: 16
+    Side: verso
+  - Key: ReceiveTheBodyOfChrist
+    Name: Receive the Body of Christ
+    Type: library-pdf
+    Path: divine-liturgy/communion-faithful/receive-the-body-of-christ.pdf
+    Side: verso
+  - Key: John6Verses
+    Name: John 6 Verses
+    TocExempt: true
+    Type: local-md
+    Path: components/verses/john-6.md
+  - Key: WhatShallIRender
+    Name: What Shall I Render?
+    Type: library-pdf
+    Path: divine-liturgy/communion-faithful/what-shall-i-render.pdf
+  - Key: Divider
+    Name: DIVIDER
+    Type: local-md
+    Path: components/communion/divider.md
+    Side: recto
+  - Key: OComeOComeEmmanuel2
+    Name: O Come, O Come, Emmanuel
+    Type: library-pdf
+    Path: divine-liturgy/communion-faithful/o-come-o-come-emmanuel-2.pdf
+  - Key: OComeOComeEmmanuelAddon
+    Name: O Come, O Come, Emmanuel (Addon)
+    TocExempt: true
+    Type: local-md
+    Path: components/communion/o-come-o-come-emmanuel-addon.md
+  - Key: ComeThouLongExpectedJesus
+    Name: Come, Thou Long Expected Jesus
+    Type: library-pdf
+    Path: divine-liturgy/communion-faithful/come-thou-long-expected-jesus.pdf
+  - Key: JoyToTheWorld
+    Name: Joy to the World
+    Type: library-pdf
+    Path: divine-liturgy/communion-faithful/joy-to-the-world.pdf
+  - Key: LetAllMortalFleshKeepSilent
+    Name: Let All Mortal Flesh Keep Silent
+    Type: library-pdf
+    Path: holy-week/07-holy-saturday/let-all-mortal-flesh-keep-silent.pdf
+  - Key: PaschalAposticha
+    Name: Paschal Aposticha
+    Type: library-pdf
+    Path: holy-week/08-pascha/paschal-aposticha.pdf
