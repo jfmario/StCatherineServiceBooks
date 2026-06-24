@@ -40,3 +40,15 @@ Components:
     Path: menaion/01/06/theophany.pdf
     Pages:
       End: 1
+  - Key: BaptismLitany
+    Name: Litany for Holy Baptism
+    Type: local-md
+    Path: components/baptism/litany.md
+  - Key: BlessingOfTheWater
+    Name: Blessing of the Water
+    Type: local-md
+    Path: components/baptism/blessing-of-the-water.md
+  - Key: The Peace
+    Name: The Peace
+    Type: library-pdf
+    Path: baptism/the-peace.pdf
