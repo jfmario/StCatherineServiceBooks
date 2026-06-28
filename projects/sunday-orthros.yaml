@@ -1,0 +1,114 @@
+Name: Sunday/Festal Orthros
+Subtitle: St Catherine Orthodox Church
+
+Description: Orthros on Sunday mornings or feast days.
+
+Filename: sunday-orthros.pdf
+
+# Instructions: components/instructions/sunday-orthros.md
+
+Components:
+  - Key: Opening
+    Name: Opening
+    TocExempt: true
+    Type: local-md
+    Path: components/common/opening.md
+  - Key: TrisagionPrayers
+    Name: Trisagion Prayers
+    Type: local-md
+    Path: components/common/trisagion-prayers.md
+  - Key: Introduction
+    Name: Introduction
+    Type: local-md
+    Path: components/orthros/introduction.md
+    Side: verso
+  - Key: Cross
+    Name: Apolytikion of the Cross
+    TocExempt: true
+    Type: library-pdf
+    Path: menaion/09/14/cross.pdf
+  - Key: Litany
+    Name: Litany
+    Type: local-md
+    Path: components/orthros/litany.md
+  - Key: Psalm3
+    Name: The Six Psalms
+    Type: local-md
+    Path: components/psalter/3.md
+    Config:
+      repeat: true
+  - Key: Psalm37
+    Name: Psalm 37
+    TocExempt: true
+    Type: local-md
+    Path: components/psalter/37.md
+    Config:
+      repeat: true
+  - Key: Psalm62
+    Name: Psalm 62
+    TocExempt: true
+    Type: local-md
+    Path: components/psalter/62.md
+    Config:
+      repeat: true
+      glory: true
+      alleluia: true
+      lord_have_mercy_glory: true
+  - Key: Psalm87
+    Name: Psalm 87
+    TocExempt: true
+    Type: local-md
+    Path: components/psalter/87.md
+    Config:
+      repeat: true
+  - Key: Psalm102
+    Name: Psalm 102
+    TocExempt: true
+    Type: local-md
+    Path: components/psalter/102.md
+    Config:
+      repeat: true
+  - Key: Psalm142
+    Name: Psalm 142
+    TocExempt: true
+    Type: local-md
+    Path: components/psalter/142.md
+    Config:
+      repeat: true
+      glory: true
+      alleluia: true
+      god_and_hope: true
+  - Key: LitanyResponses
+    Name: Litany Responses
+    TocExempt: true
+    Type: library-pdf
+    Path: common/litany-responses.pdf
+    Pages:
+      End: 1
+    Side: verso
+  - Key: LitanyOfPeace
+    Name: Litany of Peace
+    Type: local-md
+    Path: components/common/great-litany.md
+    Config:
+      enarxis: false
+  - Key: GodIsTheLordInstructions
+    Name: God is the Lord Instructions
+    TocExempt: true
+    Type: local-md
+    Path: components/orthros/god-is-the-lord.md
+    Side: verso
+  - Key: GodIsTheLord
+    Name: God is the Lord
+    Type: library-pdf
+    Path: orthros/god-is-the-lord/god-is-the-lord-tone-6.pdf
+    Pages:
+      End: 1
+  - Key: HymnsAfterGodIsTheLordSunday
+    Name: Hymns after God is the Lord
+    Type: local-md
+    Path: components/orthros/hymns-after-god-is-the-lord-sunday.md
+  - Key: LittleLitany
+    Name: The Little Litany
+    Type: local-md
+    Path: components/divine-liturgy/little-litany-1.md
