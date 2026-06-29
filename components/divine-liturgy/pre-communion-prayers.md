@@ -12,7 +12,7 @@ forgive my transgressions both voluntary and
 involuntary, of word and of deed, of knowledge and of
 ignorance, and make me worthy to partake without
 condemnation of Thine immaculate mysteries
-unto remission of sins and unto life everlasting. Amen.
+unto remission of my sins and unto life everlasting. Amen.
 
 Of Thy mystic supper, O Son of God, accept me today
 as a communicant, for I will not speak of Thy mystery
