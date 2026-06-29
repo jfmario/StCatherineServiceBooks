@@ -112,3 +112,14 @@ Components:
     Name: The Little Litany
     Type: local-md
     Path: components/divine-liturgy/little-litany-1.md
+  - Key: SessionalHymns
+    Name: Sessional Hymns
+    Type: local-md
+    Path: components/orthros/sessional-hymns.md
+  - Key: EvlogetariaResurrection
+    Name: Evlogetaria of the Resurrection
+    Type: library-pdf
+    Path: orthros/evlogetaria/evlogetaria-resurrection.pdf
+    Pages:
+      Start: 1
+      End: 4

@@ -1,6 +1,6 @@
 ## Sessional Hymns (Plain Reading)
 
-*Read the appropriate sessional hymns of the day, based on appointed rubrics. These come from the Menaion if possible, otherwise from the Weekday Octoechos for the Tone and the Day of the Week. The usual pattern follows:*
+*Read the appropriate sessional hymns of the day, based on appointed rubrics. On weekdays, these come from the Menaion if possible, otherwise from the Weekday Octoechos for the Tone and the Day of the Week. The usual pattern follows:*
 
 **First Kathismata**
 
@@ -20,7 +20,7 @@ Glory to the Father, and to the Son, and to the Holy Spirit, both now and ever, 
 
 - Third Hymn for the Second Kathismata
 
-**Third Kathismata**
+**Third Kathismata (Usually only on non-Sundays)**
 
 - First Hymn for the Third Kathismata
 - Second Hymn for the Third Kathismata
