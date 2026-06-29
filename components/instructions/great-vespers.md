@@ -1,5 +1,5 @@
 
-# Great Vespers
+# Great Vespers (Instructions)
 
 ## Preparation
 
