@@ -7,7 +7,7 @@ The Archdiocese provides at [https://www.antiochian.org/liturgicday](https://www
 
 - The tone of the week (for the tone in which "O Lord I Have Cried" will be sung). This is optional as Tone 8 is provided in this book and can be used regardless.
 
-- The stichera at ("O Lord I Have Cried"). These are listed in the variables sheet beginning after ("Deliver me from my persecutors..."). Also, the Doxasticon (on "Glory...") and the Theotokion (on "Both now...") are also needed. (p. 14)
+- The stichera at ("O Lord I Have Cried"). These are listed in the variables sheet beginning after ("Deliver me from my persecutors..."). Also, the Doxasticon (on "Glory...") and the Theotokion (on "Both now...") are also needed. (p. 13)
 
 - The prokeimenon, if something other than the normal one for Saturdays ("The Lord is King...").
 
