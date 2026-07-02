@@ -5,15 +5,13 @@
 
 The Archdiocese provides at [https://www.antiochian.org/liturgicday](https://www.antiochian.org/liturgicday) the entire service of the Divine Liturgy for each day, including all variable hymns, prokeimena, and Scripture readings. If desired, you can print the entire service. However, only a few things are actually needed as variables:
 
-- The tone of the week (for the Great Doxology, the hymns after it, the Resurrection Hymn at the hymns of the day, and other Octoechos hymns). Tones 1, 4, and 8 are provided in this book on pp. 1–7 and can be used as defaults, but the appointed tone should be used when possible.
+- The tone of the week (for the Great Doxology, the hymns after it, the Resurrection Hymn at the hymns of the day, and other Octoechos hymns).
 
-- Whether the Liturgy of St John Chrysostom or the Liturgy of St Basil is celebrated. This affects the magnification hymn (pp. 42–47).
+- Whether the Liturgy of St John Chrysostom or the Liturgy of St Basil is celebrated. This affects the megalynarion hymn (pp. 42–47).
 
 - The antiphons and entrance hymn, if festal antiphons or a festal entrance hymn are appointed in place of the usual psalm antiphons (pp. 11–13) and entrance hymn (p. 18).
 
-- The hymns of the day at the small entrance (p. 19): the Resurrection Hymn on Sundays, festal troparia, and any other appointed hymns. Also note whether there is a stanza between ("Glory...") and ("Both now..."). If not, ("Glory... both now...") is chanted as one verse followed by the Theotokion or other hymn.
-
-- The hymn for the saint of the day or patron (p. 20). St Catherine is provided as an example.
+- The hymns of the day at the small entrance (p. 19): the Resurrection Hymn on Sundays, festal troparia, and any other appointed hymns.
 
 - The kontakion, if something other than the kontakion for ordinary time (pp. 22–23).
 
@@ -21,17 +19,9 @@ The Archdiocese provides at [https://www.antiochian.org/liturgicday](https://www
 
 - The prokeimenon and epistle reading (p. 26).
 
-- The alleluia verses (p. 27).
-
-- The gospel reading (p. 29).
-
-- The magnification hymn, if something other than the usual Sunday hymn is appointed (pp. 42–47). On most Sundays of St John Chrysostom, ("It is Truly Meet") on pp. 44–45 is sung. For St Basil, ("All of Creation Rejoices") on pp. 46–47 is sung instead.
+- The megalynarion hymn, if something other than the usual Sunday hymn is appointed (pp. 42–47). On most Sundays of St John Chrysostom, ("It is Truly Meet") on pp. 44–45 is sung. For St Basil, ("All of Creation Rejoices") on pp. 46–47 is sung instead.
 
 - The communion hymn (p. 56).
-
-- The hymns for the communion of the faithful (pp. 58, 60), if something other than the defaults is appointed.
-
-- The dismissal troparion (p. 67).
 
 ## Setup
 
