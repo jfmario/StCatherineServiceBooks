@@ -5,6 +5,8 @@ Description: The Divine Liturgy of St John Chrysostom or of St Basil, as celebra
 
 Filename: divine-liturgy.pdf
 
+Instructions: components/instructions/divine-liturgy.md
+
 Components:
   - Key: GreatDoxology
     Name: Great Doxology
