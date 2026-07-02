@@ -3,7 +3,7 @@
 
 ## Preparation
 
-The Archdiocese provides at [https://www.antiochian.org/liturgicday](https://www.antiochian.org/liturgicday) the entire service of the Divine Liturgy for each day, including all variable hymns, prokeimena, and Scripture readings. If desired, you can print the entire service. However, only a few things are actually needed as variables:
+The Archdiocese provides at [https://www.antiochian.org/liturgicday](https://www.antiochian.org/liturgicday) the entire service of the Divine Liturgy for each day, including all variable hymns, prokeimena, and Scripture readings.
 
 - The tone of the week (for the Great Doxology, the hymns after it, the Resurrection Hymn at the hymns of the day, and other Octoechos hymns).
 
@@ -21,7 +21,7 @@ The Archdiocese provides at [https://www.antiochian.org/liturgicday](https://www
 
 - The megalynarion hymn, if something other than the usual Sunday hymn is appointed (pp. 42–47). On most Sundays of St John Chrysostom, ("It is Truly Meet") on pp. 44–45 is sung. For St Basil, ("All of Creation Rejoices") on pp. 46–47 is sung instead.
 
-- The communion hymn (p. 56).
+- The communion hymn (p. 56), if something other than the default ("Praise the Lord from the Heavens").
 
 ## Setup
 
