@@ -1,3 +1,9 @@
+## Enarxis
+
+Priest:  Blessed is the Kingdom of the Father and of the Son and of the Holy Spirit, now and ever and unto ages of ages.
+
+People/Choir: Amen
+
 ## The Litany of Peace
 
 Deacon/Priest: In peace, let us pray to the Lord.

@@ -12,7 +12,6 @@ _RESERVED_KEYS = frozenset({"template", "config", "data", "as"})
 _CONFIG_DEFAULTS: dict[str, Any] = {
     "alleluia": False,
     "description": "",
-    "enarxis": False,
     "glory": False,
     "god_and_hope": False,
     "lord_have_mercy_glory": False,

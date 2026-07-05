@@ -90,8 +90,6 @@ Components:
     Name: Litany of Peace
     Type: local-md
     Path: components/common/great-litany.md
-    Config:
-      enarxis: false
   - Key: GodIsTheLordInstructions
     Name: God is the Lord Instructions
     TocExempt: true

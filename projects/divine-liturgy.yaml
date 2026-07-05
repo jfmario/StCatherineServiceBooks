@@ -34,9 +34,7 @@ Components:
   - Key: LitanyOfPeace
     Name: Litany of Peace
     Type: local-md
-    Path: components/common/great-litany.md
-    Config:
-      enarxis: true
+    Path: components/divine-liturgy/great-litany.md
   - Key: Antiphon1
     Name: First Antiphon
     Type: library-pdf
