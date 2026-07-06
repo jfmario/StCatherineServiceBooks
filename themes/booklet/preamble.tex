@@ -1,0 +1,102 @@
+% Booklet theme for St Catherine Orthodox Church congregational service books.
+% All formatting is defined here so component files remain clean liturgical text.
+
+\documentclass[letterpaper,twoside]{extarticle}
+\usepackage[fontsize=18pt]{fontsize}
+
+% --- Packages ---
+\usepackage[
+  top=1.15in,
+  bottom=1.15in,
+  left=1.15in,
+  right=1.15in,
+]{geometry}
+\usepackage{fancyhdr}     % page number placement
+\usepackage{parskip}      % space between paragraphs, no first-line indent by default
+\usepackage{setspace}     % leading control
+\usepackage{microtype}    % improved justification
+\usepackage{ulem}         % \uline for variable phrases (normalem keeps \emph italic)
+\normalem
+\usepackage{enumitem}     % list customization
+\usepackage{ragged2e}     % \RaggedRight for body text if desired
+\usepackage{etoolbox}     % \AtBeginEnvironment etc.
+
+% --- Page style ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyhead[LE,RO]{\small\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+% --- Section headings ---
+% Large, serif, no number, extra space above
+\usepackage{titlesec}
+\titleformat{\section}[block]{\large\bfseries\filright}{}{0pt}{}
+\titlespacing*{\section}{0pt}{2ex plus 1ex minus .5ex}{0.5ex plus .2ex}
+
+% \subsect — bold inline heading used for named variants
+% (e.g. "Today is Salvation (Tones 1-4)")
+\newcommand{\subsect}[1]{\par\medskip\noindent\textbf{#1}\par\smallskip}
+
+% --- The cross symbol ---
+% Used before certain blessings and responses. Rendered as a small bold cross.
+\newcommand{\cross}{\textdagger\kern1pt}
+
+% --- Role-label dialogue ---
+% \speak{Role}{Body text}
+% Produces: "Role:   Body text" with hanging indent so the body aligns
+% after the label. The label column is 5em wide.
+\newlength{\speaklabelwidth}
+\setlength{\speaklabelwidth}{5em}
+
+\newcommand{\speak}[2]{%
+  \par\bgroup
+  \leftskip=\speaklabelwidth\relax
+  \parindent=0pt\relax
+  \noindent\llap{\makebox[\speaklabelwidth][l]{#1:}}\ignorespaces#2%
+  \par\egroup
+}
+
+% --- Rubrics ---
+% Italic stage directions / instructions for the congregation.
+\newcommand{\rubric}[1]{\par\smallskip\noindent\textit{#1}\par\smallskip}
+
+% --- Cover page ---
+% \bookletcover{Title}{Subtitle}{Date string}
+\newcommand{\bookletcover}[3]{%
+  \thispagestyle{empty}
+  \vspace*{2in}
+  \begin{center}
+    {\fontsize{28}{34}\selectfont #1\par}
+    \vspace{1.5ex}
+    {\fontsize{22}{28}\selectfont #2\par}
+    \vspace{2ex}
+    {\normalsize Revision: #3\par}
+  \end{center}
+  \newpage
+  % Blank verso — no page number; counter resets so the next page (intro) is 1
+  \thispagestyle{empty}
+  \phantom{x}
+  \newpage
+  \setcounter{page}{1}%
+}
+
+% --- Introduction page ---
+% \bookletintro{Body paragraphs}{Author name}{Date string}
+% Body paragraphs should be separated by \par or blank lines inside the arg.
+\newcommand{\bookletintro}[3]{%
+  \setlength{\parindent}{2em}
+  \noindent #1
+  \setlength{\parindent}{0pt}
+  \par\medskip
+  \noindent\hspace{2em}#2\par
+  \noindent\hspace{2em}#3\par
+  \newpage
+}
+
+% Blank final page on every booklet
+\AtEndDocument{\newpage\thispagestyle{empty}\phantom{x}}

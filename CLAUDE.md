@@ -13,12 +13,12 @@ Always use the project `.venv`:
 Output is written to `out/`. To build all projects:
 
 ```
-for f in projects/*.yaml; do .venv/bin/python scripts/build.py "$f"; done
+for f in projects/choir-books/*.yaml; do .venv/bin/python scripts/build.py "$f"; done
 ```
 
 ## Project files
 
-Each file in `projects/` defines one service book:
+Choir book project YAMLs live in `projects/choir-books/`:
 
 - `baptism.yaml` — Holy Baptism
 - `communion-faithful.yaml` — Communion of the Faithful
@@ -32,17 +32,51 @@ Each file in `projects/` defines one service book:
 ## Structure
 
 ```
-projects/       # One YAML per service book
-components/     # Markdown fragments, organized by service
-  common/       # Shared across multiple services
-  divine-liturgy/
+projects/
+  choir-books/  # One YAML per choir/service book
+  booklets/     # One .tex per congregational booklet
+components/     # Source fragments, organized by type and service
+  divine-liturgy/  # Choir book markdown components
+  common/          # Shared choir book components
   orthros/
   vespers/
   baptism/
-  ...
+  booklets/        # LaTeX fragments for booklets
+    common/        # Shared across multiple booklets (Creed, Lord's Prayer, etc.)
+    divine-liturgy/
+themes/
+  booklet/
+    preamble.tex  # LaTeX preamble / style definitions for booklets
 scripts/        # Build pipeline
 out/            # Build artifacts (not committed)
 ```
+
+## Booklets
+
+Congregational service booklets are LaTeX projects. Requires MacTeX (`brew install --cask mactex-no-gui`). The project file is the root LaTeX document and lives in `projects/booklets/`. It `\input{}`s the theme preamble and component fragments directly — no YAML or assembly step.
+
+To build a booklet:
+
+```
+.venv/bin/python scripts/build_booklet.py projects/booklets/divine-liturgy.tex
+```
+
+To build all booklets:
+
+```
+for f in projects/booklets/*.tex; do .venv/bin/python scripts/build_booklet.py "$f"; done
+```
+
+Booklet components are `.tex` files in `components/booklets/`. Reusable content (e.g. the Creed, Lord's Prayer) lives in `components/booklets/common/` so it can be shared across multiple booklets.
+
+The LaTeX preamble at `themes/booklet/preamble.tex` defines all formatting commands:
+
+- `\speak{Role}{text}` — role-label dialogue with hanging indent
+- `\rubric{text}` — italic stage direction / rubric
+- `\cross` — the cross symbol (✢) used before blessings and responses
+- `\subsect{Title}` — bold subsection heading for named variants
+- `\bookletcover{Title}{Subtitle}{Date}` — cover page
+- `\bookletintro{body}{author}{date}` — introduction page
 
 ## Components
 
