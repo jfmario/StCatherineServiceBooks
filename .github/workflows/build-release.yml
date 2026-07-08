@@ -78,7 +78,8 @@ jobs:
             texlive-latex-recommended \
             texlive-latex-extra \
             texlive-plain-generic \
-            texlive-fonts-recommended
+            texlive-fonts-recommended \
+            cm-super
 
       - name: Build project PDFs
         shell: bash
