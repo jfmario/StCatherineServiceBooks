@@ -1,11 +1,11 @@
-Name: Sunday Orthros
+Name: Festal Orthros
 Subtitle: St Catherine Orthodox Church
 
-Description: Orthros on Sunday mornings.
+Description: Orthros on feast days.
 
-Filename: sunday-orthros.pdf
+Filename: festal-orthros.pdf
 
-# Instructions: components/instructions/sunday-orthros.md
+# Instructions: components/instructions/festal-orthros.md
 
 Components:
   - Key: Opening
@@ -102,10 +102,10 @@ Components:
     Path: orthros/god-is-the-lord/god-is-the-lord-tone-6.pdf
     Pages:
       End: 1
-  - Key: HymnsAfterGodIsTheLordSunday
+  - Key: HymnsAfterGodIsTheLordFestal
     Name: Hymns after God is the Lord
     Type: local-md
-    Path: components/orthros/hymns-after-god-is-the-lord-sunday.md
+    Path: components/orthros/hymns-after-god-is-the-lord-festal.md
   - Key: LittleLitany
     Name: The Little Litany
     Type: local-md
@@ -114,10 +114,9 @@ Components:
     Name: Sessional Hymns
     Type: local-md
     Path: components/orthros/sessional-hymns.md
-  - Key: EvlogetariaResurrection
-    Name: Evlogetaria of the Resurrection
+  - Key: Polyeleos Psalm 134
+    Name: Polyeleos Psalm 134
     Type: library-pdf
-    Path: orthros/evlogetaria/evlogetaria-resurrection.pdf
+    Path: orthros/polyeleos/psalm-134.pdf
     Pages:
-      Start: 1
       End: 4

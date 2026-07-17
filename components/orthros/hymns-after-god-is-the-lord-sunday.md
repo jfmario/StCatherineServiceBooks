@@ -12,5 +12,3 @@ Glory to the Father, and to the Son, and to the Holy Spirit.
 Both now and ever, and unto ages of ages. Amen.
 
 - The assigned Theotokion for the tone matching the previous hymn.
-
-*On major festal days, the hymn of the feast is sung 3 times instead.*
