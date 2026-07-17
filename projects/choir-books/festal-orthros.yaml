@@ -114,9 +114,54 @@ Components:
     Name: Sessional Hymns
     Type: local-md
     Path: components/orthros/sessional-hymns.md
-  - Key: Polyeleos Psalm 134
+  - Key: PolyeleosPsalm134
     Name: Polyeleos Psalm 134
     Type: library-pdf
     Path: orthros/polyeleos/psalm-134.pdf
     Pages:
       End: 4
+  - Key: PolyeleosHymns
+    Name: Polyeleos Hymns
+    Type: local-md
+    Path: components/orthros/polyeleos-hymns.md
+  - Key: FestalAnabathmoi
+    Name: Festal Anabathmoi
+    Type: library-pdf
+    Path: orthros/anabathmoi/festal-anabathmoi.pdf
+    Pages:
+      End: 2
+    Side: verso
+  - Key: OrthrosProkeimenon
+    Name: Orthros Prokeimenon
+    Type: local-md
+    Path: components/orthros/prokeimenon.md
+  - Key: Gospel
+    Name: Gospel
+    Type: library-pdf
+    Path: orthros/gospel/orthros-gospel.pdf
+  - Key: Psalm50
+    Name: Psalm 50
+    Type: local-md
+    Path: components/psalter/50.md
+  - Key: TropariaAfterPsalm50
+    Name: Festal Troparia after Psalm 50
+    Type: local-md
+    Path: components/orthros/troparia-after-psalm-50.md
+  - Key: Intercession
+    Name: The Intercession
+    Type: local-md
+    Path: components/orthros/intercession.md
+  - Key: KontakionOikos
+    Name: Kontakion and Oikos and Synaxarion
+    Type: local-md
+    Path: components/orthros/kontakion-oikos.md
+  - Key: AbbreviatedCanon
+    Name: Canon
+    Type: local-md
+    Path: components/orthros/abbreviated-canon.md
+    Side: verso
+  - Key: LittleLitanyAfterCanon
+    Name: The Little Litany
+    Type: local-md
+    Path: components/orthros/little-litany-after-canon.md
+

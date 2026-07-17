@@ -11,4 +11,4 @@ We praise, we bless, and we worship the Lord.
 
 Priest/Deacon: The Theotokos and Mother of the Light let us honor and magnify in song.
 
-*Sing the Magnifications, if possible in the Tone matching that of the canon. The Tone 8 version is provided on the next page.*
+*Sing the Magnifications, if possible in the Tone matching that of the canon. When Magnifications follow in this book, the Tone 8 version is provided on the next page. After the Magnifications, sing Ode 9 from the appointed variables.*
