@@ -164,4 +164,28 @@ Components:
     Name: The Little Litany
     Type: local-md
     Path: components/orthros/little-litany-after-canon.md
+  - Key: Exaposteilarion
+    Name: Exaposteilarion
+    Type: local-md
+    Path: components/orthros/exaposteilarion-festal.md
+  - Key: Praises
+    Name: The Praises
+    Type: local-md
+    Path: components/orthros/praises.md
+    Side: verso
+  - Key: PraisesTone4
+    Name: The Praises
+    TocExempt: true
+    Type: library-pdf
+    Path: orthros/praises/praises-tone-4.pdf
+  - Key: GreatDoxology
+    Name: Great Doxology
+    Type: library-pdf
+    Path: orthros/great-doxology/doxology-tone-1.pdf
+    Pages:
+      Start: 2
+  - Key: HymnOfTheFeast
+    Name: Hymn of the Feast
+    Type: local-md
+    Path: components/orthros/hymn-of-the-feast.md
 
