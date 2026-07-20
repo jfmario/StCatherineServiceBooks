@@ -9,9 +9,14 @@ from reportlab.pdfgen import canvas
 from liturgics.fonts import BODY_FONT, TITLE_FONT
 
 
-def _revision_label(when: date | None = None) -> str:
+def format_revision_date(when: date | None = None) -> str:
+    """Format a revision date like choir-book covers: ``Jul 5, 2026``."""
     today = when or date.today()
-    return f"Revision: {today.strftime('%b')} {today.day}, {today.year}"
+    return f"{today.strftime('%b')} {today.day}, {today.year}"
+
+
+def _revision_label(when: date | None = None) -> str:
+    return f"Revision: {format_revision_date(when)}"
 
 
 def build_cover_pdf(

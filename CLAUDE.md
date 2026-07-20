@@ -78,6 +78,7 @@ The LaTeX preamble at `themes/booklet/preamble.tex` defines all formatting comma
 - `\subsect{Title}` — bold subsection heading for named variants
 - `\bookletcover{Title}{Subtitle}{Date}` — cover page
 - `\bookletintro{body}{author}{date}` — introduction page
+- `\bookletdate` — build-time revision date (injected by `build_booklet.py`, same format as choir-book covers). Use this instead of hardcoding dates on the cover/intro.
 
 ## Components
 

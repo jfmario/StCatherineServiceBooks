@@ -3,17 +3,18 @@
 from __future__ import annotations
 
 import argparse
-import os
 import shutil
 import subprocess
 import sys
 import tempfile
+from datetime import date
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 
 from liturgics.config import find_project_root
+from liturgics.cover import format_revision_date
 
 # MacTeX installs here and doesn't always make it onto PATH in non-login shells.
 _MACTEX_BIN = Path("/Library/TeX/texbin")
@@ -31,11 +32,31 @@ def _find_pdflatex() -> str:
     )
 
 
-def build_booklet(tex_path: Path, project_root: Path | None = None) -> Path:
+def _latex_path(path: Path, root: Path) -> str:
+    """Return a path suitable for \\input{}, preferred relative to project root."""
+    try:
+        return path.relative_to(root).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
+def build_booklet(
+    tex_path: Path,
+    project_root: Path | None = None,
+    revision_date: date | None = None,
+) -> Path:
     tex_path = tex_path.resolve()
     root = project_root or find_project_root(tex_path.parent)
     out_dir = root / "out"
     out_dir.mkdir(parents=True, exist_ok=True)
+
+    jobname = tex_path.stem
+    date_str = format_revision_date(revision_date)
+    # Inject \\bookletdate the same way choir books stamp Revision: <today>.
+    latex_source = (
+        f"\\def\\bookletdate{{{date_str}}}"
+        f"\\input{{{_latex_path(tex_path, root)}}}"
+    )
 
     with tempfile.TemporaryDirectory() as tmp:
         tmp_path = Path(tmp)
@@ -45,13 +66,14 @@ def build_booklet(tex_path: Path, project_root: Path | None = None) -> Path:
             _find_pdflatex(),
             "-interaction=nonstopmode",
             f"-output-directory={tmp_path}",
-            str(tex_path),
+            f"-jobname={jobname}",
+            latex_source,
         ]
         for _ in range(2):
             result = subprocess.run(cmd, cwd=root, capture_output=True, text=True)
             if result.returncode != 0:
                 # Print the tail of the log for useful error context
-                log_file = tmp_path / tex_path.with_suffix(".log").name
+                log_file = tmp_path / f"{jobname}.log"
                 if log_file.exists():
                     lines = log_file.read_text(errors="replace").splitlines()
                     print("\n".join(lines[-40:]), file=sys.stderr)
@@ -59,7 +81,7 @@ def build_booklet(tex_path: Path, project_root: Path | None = None) -> Path:
                     print(result.stdout[-3000:], file=sys.stderr)
                 raise RuntimeError(f"pdflatex failed (exit {result.returncode})")
 
-        pdf_name = tex_path.with_suffix(".pdf").name
+        pdf_name = f"{jobname}.pdf"
         output_path = out_dir / pdf_name
         shutil.copy(tmp_path / pdf_name, output_path)
 

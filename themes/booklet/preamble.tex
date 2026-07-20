@@ -64,6 +64,10 @@
 % Italic stage directions / instructions for the congregation.
 \newcommand{\rubric}[1]{\par\smallskip\noindent\textit{#1}\par\smallskip}
 
+% \\bookletdate is injected by scripts/build_booklet.py at build time
+% (same format as choir-book covers: ``Jul 5, 2026``).
+\providecommand{\bookletdate}{UNKNOWN DATE}
+
 % --- Cover page ---
 % \bookletcover{Title}{Subtitle}{Date string}
 \newcommand{\bookletcover}[3]{%
