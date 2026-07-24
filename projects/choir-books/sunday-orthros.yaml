@@ -125,3 +125,7 @@ Components:
     Name: The Little Litany
     Type: local-md
     Path: components/orthros/little-litany-after-evlogetaria.md
+  - Key: HypakoeAndAnabathmoi
+    Name: Hypakoe and Anabathmoi
+    Type: local-md
+    Path: components/orthros/hypakoe-and-anabathmoi.md
