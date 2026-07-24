@@ -33,4 +33,12 @@ Components:
 ```
 </choir-book-project>
 
-- 
+- Design the component. It may involve an S3 Path to a PDF, incorporating an existing md file, or writing a new md file.
+
+- Add the component after the indicated existing component. If an existing component is not given, add the new component to the end of the `Components` key.
+
+Notes:
+
+- You do not have access to the S3 bucket in this context. You can trust that the S3 paths given to you exist. If not, the build failure will make this clear to the user.
+
+- Component md files live in directories under `components/`. 
