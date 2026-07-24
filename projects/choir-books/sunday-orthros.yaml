@@ -129,3 +129,7 @@ Components:
     Name: Hypakoe and Anabathmoi
     Type: local-md
     Path: components/orthros/hypakoe-and-anabathmoi.md
+  - Key: OrthrosProkeimenon
+    Name: Orthros Prokeimenon
+    Type: local-md
+    Path: components/orthros/prokeimenon.md
