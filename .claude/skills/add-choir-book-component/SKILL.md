@@ -19,7 +19,7 @@ Instructions:
 - If the service book does not exist in `projects/choir-books/`, create it according to the below starter.
 
 <choir-book-project>
-```yml
+```
 Name: <serviceName/>
 Subtitle: St Catherine Orthodox Church
 
