@@ -121,3 +121,7 @@ Components:
     Pages:
       Start: 1
       End: 4
+  - Key: LittleLitanyAfterEvlogetaria
+    Name: The Little Litany
+    Type: local-md
+    Path: components/orthros/little-litany-after-evlogetaria.md
