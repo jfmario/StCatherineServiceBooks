@@ -157,3 +157,14 @@ Components:
     Name: Kontakion and Oikos and Synaxarion
     Type: local-md
     Path: components/orthros/kontakion-oikos.md
+  - Key: AbbreviatedCanon
+    Name: Canon
+    Type: local-md
+    Path: components/orthros/abbreviated-canon.md
+    Side: verso
+  - Key: Magnifications
+    Name: Magnifications
+    Type: library-pdf
+    Path: orthros/magnifications/magnifications-tone-8.pdf
+    Pages:
+      End: 1
