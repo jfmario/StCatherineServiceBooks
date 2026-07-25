@@ -1,5 +1,7 @@
 ## Orthros Prokeimenon
 
+Priest/Deacon: Let us attend!
+
 Reader: *Chants the refrain of the prokeimenon.*
 
 People/Choir: *Repeat the refrain.*
