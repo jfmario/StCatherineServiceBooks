@@ -133,3 +133,11 @@ Components:
     Name: Orthros Prokeimenon
     Type: local-md
     Path: components/orthros/prokeimenon.md
+  - Key: Gospel
+    Name: Gospel
+    Type: library-pdf
+    Path: orthros/gospel/orthros-gospel.pdf
+  - Key: Psalm50
+    Name: Psalm 50
+    Type: local-md
+    Path: components/psalter/50.md
