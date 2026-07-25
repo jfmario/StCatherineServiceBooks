@@ -149,3 +149,11 @@ Components:
     Name: Troparia after Psalm 50
     Type: local-md
     Path: components/orthros/troparia-after-psalm-50.md
+  - Key: Intercession
+    Name: The Intercession
+    Type: local-md
+    Path: components/orthros/intercession.md
+  - Key: KontakionOikos
+    Name: Kontakion and Oikos and Synaxarion
+    Type: local-md
+    Path: components/orthros/kontakion-oikos.md
