@@ -1,5 +1,5 @@
 
-## Festal Troparia after Psalm 50 (Tone 2)
+## Troparia after Psalm 50 (Tone 2)
 
 Glory to the Father, and to the Son, and to the Holy Spirit.
 

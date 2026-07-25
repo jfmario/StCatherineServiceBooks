@@ -144,7 +144,7 @@ Components:
     Type: local-md
     Path: components/psalter/50.md
   - Key: TropariaAfterPsalm50
-    Name: Festal Troparia after Psalm 50
+    Name: Troparia after Psalm 50
     Type: local-md
     Path: components/orthros/troparia-after-psalm-50.md
   - Key: Intercession
