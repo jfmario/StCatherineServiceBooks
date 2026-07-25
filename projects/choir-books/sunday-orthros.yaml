@@ -137,6 +137,10 @@ Components:
     Name: Gospel
     Type: library-pdf
     Path: orthros/gospel/orthros-gospel.pdf
+  - Key: HavingBeheldTheResurrection
+    Name: Having Beheld the Resurrection
+    Type: local-md
+    Path: components/orthros/having-beheld-the-resurrection.md
   - Key: Psalm50
     Name: Psalm 50
     Type: local-md
