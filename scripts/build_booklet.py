@@ -70,7 +70,9 @@ def build_booklet(
             latex_source,
         ]
         for _ in range(2):
-            result = subprocess.run(cmd, cwd=root, capture_output=True, text=True)
+            # pdflatex may emit non-UTF-8 bytes in overfull-box messages, so
+            # decode stdout/stderr defensively rather than via text=True.
+            result = subprocess.run(cmd, cwd=root, capture_output=True)
             if result.returncode != 0:
                 # Print the tail of the log for useful error context
                 log_file = tmp_path / f"{jobname}.log"
@@ -78,7 +80,7 @@ def build_booklet(
                     lines = log_file.read_text(errors="replace").splitlines()
                     print("\n".join(lines[-40:]), file=sys.stderr)
                 else:
-                    print(result.stdout[-3000:], file=sys.stderr)
+                    print(result.stdout.decode("utf-8", errors="replace")[-3000:], file=sys.stderr)
                 raise RuntimeError(f"pdflatex failed (exit {result.returncode})")
 
         pdf_name = f"{jobname}.pdf"

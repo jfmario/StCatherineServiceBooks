@@ -1,14 +1,23 @@
 % Booklet theme for St Catherine Orthodox Church congregational service books.
 % All formatting is defined here so component files remain clean liturgical text.
+%
+% Font size is intentionally large: letter pages are imposed as half-letter
+% booklets (~0.65× linear), so the source size must compensate. Prefer the
+% fontsize package over an extarticle class option — extarticle only accepts
+% 8/9/10/11/12/14/17/20pt (an 18pt option is silently ignored). 22pt keeps
+% the printed booklet readable without ballooning the page count.
 
-\documentclass[letterpaper,twoside,18pt]{extarticle}
+\documentclass[letterpaper,twoside]{extarticle}
+\usepackage[T1]{fontenc}              % use cm-super Type 1 at arbitrary sizes
+\usepackage[fontsize=22pt]{fontsize}  % ~14pt after typical booklet imposition
 
 % --- Packages ---
 \usepackage[
-  top=1.15in,
-  bottom=1.15in,
-  left=1.15in,
-  right=1.15in,
+  top=0.95in,
+  bottom=0.95in,
+  left=0.95in,
+  right=0.95in,
+  headheight=25pt,        % room for \small page numbers at 22pt body
 ]{geometry}
 \usepackage{fancyhdr}     % page number placement
 \usepackage{parskip}      % space between paragraphs, no first-line indent by default
@@ -19,6 +28,9 @@
 \usepackage{enumitem}     % list customization
 \usepackage{ragged2e}     % \RaggedRight for body text if desired
 \usepackage{etoolbox}     % \AtBeginEnvironment etc.
+
+% Large body size + hanging role labels overfull easily when fully justified.
+\emergencystretch=3em
 
 % --- Page style ---
 \pagestyle{fancy}
@@ -74,9 +86,9 @@
   \thispagestyle{empty}
   \vspace*{2in}
   \begin{center}
-    {\fontsize{28}{34}\selectfont #1\par}
+    {\fontsize{36}{42}\selectfont #1\par}
     \vspace{1.5ex}
-    {\fontsize{22}{28}\selectfont #2\par}
+    {\fontsize{28}{34}\selectfont #2\par}
     \vspace{2ex}
     {\normalsize Revision: #3\par}
   \end{center}
