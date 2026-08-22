@@ -56,6 +56,27 @@ Components:
     Type: library-pdf
     Path: divine-liturgy/kontakion/kontakion-ordinary.pdf
     Side: verso
-  # TODO: Lord, have mercy (40x)
+  - Key: PrayerOfTheHours
+    Name: Prayer of the Hours
+    Type: local-md
+    Path: components/typika/prayer-of-the-hours.md
+    Side: verso
+  - Key: LordHaveMercy40x
+    TocExempt: true
+    Name: Lord, Have Mercy (40x)
+    Type: library-pdf
+    Path: common/lord-have-mercy-40x.pdf
+  - Key: BlessedBeTheName
+    Name: Blessed be the Name
+    Type: library-pdf
+    Path: divine-liturgy/post-communion/blessed-be-the-name.pdf
+  - Key: Psalm33
+    Name: Psalm 33
+    Type: local-md
+    Path: components/psalter/33.md
+  - Key: HomilyAndConclusion
+    Name: Homily & Conclusion
+    Type: local-md
+    Path: components/typika/homily-and-conclusion.md
 
 # TODO: Instructions on first page about variables.
