@@ -168,3 +168,7 @@ Components:
     Path: orthros/magnifications/magnifications-tone-8.pdf
     Pages:
       End: 1
+  - Key: LittleLitanyAfterCanon
+    Name: The Little Litany
+    Type: local-md
+    Path: components/orthros/little-litany-after-canon.md
