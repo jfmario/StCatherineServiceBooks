@@ -172,3 +172,31 @@ Components:
     Name: The Little Litany
     Type: local-md
     Path: components/orthros/little-litany-after-canon.md
+  - Key: Exaposteilarion
+    Name: Exaposteilarion and Theotokion
+    Type: local-md
+    Path: components/orthros/exaposteilarion.md
+  - Key: Praises
+    Name: The Praises
+    Type: local-md
+    Path: components/orthros/praises.md
+    Side: verso
+  - Key: PraisesTone4
+    Name: The Praises
+    TocExempt: true
+    Type: library-pdf
+    Path: orthros/praises/praises-tone-4.pdf
+  - Key: GreatDoxology
+    Name: Great Doxology
+    Type: library-pdf
+    Path: orthros/great-doxology/doxology-tone-1.pdf
+    Pages:
+      Start: 2
+  - Key: TodayIsSalvation
+    Name: Today Is Salvation
+    Type: library-pdf
+    Path: orthros/hymn-after-great-doxology/today-is-salvation-tone-4.pdf
+  - Key: HavingRisen
+    Name: Having Risen from the Tomb
+    Type: library-pdf
+    Path: orthros/hymn-after-great-doxology/having-risen-tone-8.pdf
