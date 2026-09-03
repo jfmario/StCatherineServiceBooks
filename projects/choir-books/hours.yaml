@@ -1,0 +1,78 @@
+Name: The Hours
+Subtitle: St Catherine Orthodox Church
+
+Description: The First, Third, Sixth, and Ninth Hours.
+
+Filename: hours.pdf
+
+# Instructions: TODO
+
+Components:
+  - Key: FirstHour
+    Name: FIRST HOUR
+    Type: local-md
+    Path: components/hours/first-hour.md
+    Side: recto
+  - Key: FirstHourTrisagionPrayers
+    Name: Trisagion Prayers
+    Type: local-md
+    Path: components/common/trisagion-prayers.md
+  - Key: FirstHourLordHaveMercyGlory
+    Name: Lord, Have Mercy
+    Type: local-md
+    Path: components/hours/lord-have-mercy-glory.md
+  - Key: FirstHourComeLetUsWorship
+    Name: Come, Let Us Worship
+    Type: library-pdf
+    Path: common/come-let-us-worship.pdf
+  - Key: ThirdHour
+    Name: THIRD HOUR
+    Type: local-md
+    Path: components/hours/third-hour.md
+    Side: recto
+  - Key: ThirdHourTrisagionPrayers
+    Name: Trisagion Prayers
+    Type: local-md
+    Path: components/common/trisagion-prayers.md
+  - Key: ThirdHourLordHaveMercyGlory
+    Name: Lord, Have Mercy
+    Type: local-md
+    Path: components/hours/lord-have-mercy-glory.md
+  - Key: ThirdHourComeLetUsWorship
+    Name: Come, Let Us Worship
+    Type: library-pdf
+    Path: common/come-let-us-worship.pdf
+  - Key: SixthHour
+    Name: SIXTH HOUR
+    Type: local-md
+    Path: components/hours/sixth-hour.md
+    Side: recto
+  - Key: SixthHourTrisagionPrayers
+    Name: Trisagion Prayers
+    Type: local-md
+    Path: components/common/trisagion-prayers.md
+  - Key: SixthHourLordHaveMercyGlory
+    Name: Lord, Have Mercy
+    Type: local-md
+    Path: components/hours/lord-have-mercy-glory.md
+  - Key: SixthHourComeLetUsWorship
+    Name: Come, Let Us Worship
+    Type: library-pdf
+    Path: common/come-let-us-worship.pdf
+  - Key: NinthHour
+    Name: NINTH HOUR
+    Type: local-md
+    Path: components/hours/ninth-hour.md
+    Side: recto
+  - Key: NinthHourTrisagionPrayers
+    Name: Trisagion Prayers
+    Type: local-md
+    Path: components/common/trisagion-prayers.md
+  - Key: NinthHourLordHaveMercyGlory
+    Name: Lord, Have Mercy
+    Type: local-md
+    Path: components/hours/lord-have-mercy-glory.md
+  - Key: NinthHourComeLetUsWorship
+    Name: Come, Let Us Worship
+    Type: library-pdf
+    Path: common/come-let-us-worship.pdf
