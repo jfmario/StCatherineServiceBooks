@@ -23,6 +23,7 @@ Choir book project YAMLs live in `projects/choir-books/`:
 - `baptism.yaml` — Holy Baptism
 - `communion-faithful.yaml` — Communion of the Faithful
 - `daily-orthros.yaml` — Daily Orthros (weekday mornings)
+- `daily-vespers.yaml` — Daily Vespers (weekday evenings)
 - `divine-liturgy.yaml` — Divine Liturgy of St John Chrysostom / St Basil
 - `episcopal.yaml` — Episcopal services
 - `great-vespers.yaml` — Great Vespers (Saturday evenings / feast eves)

@@ -1,0 +1,128 @@
+Name: Daily Vespers
+Subtitle: St Catherine Orthodox Church
+
+Description: Vespers during normal weekdays.
+
+Filename: daily-vespers.pdf
+
+# Instructions: components/instructions/daily-vespers.md
+
+Components:
+  - Key: ComeLetUsWorship
+    Name: Come, Let Us Worship
+    Type: library-pdf
+    Path: common/come-let-us-worship.pdf
+  - Key: Psalm103
+    Name: Psalm 103
+    Type: local-md
+    Path: components/psalter/103.md
+    Config:
+      repeat: true
+      glory: true
+      alleluia: true
+      god_and_hope: true
+  - Key: LitanyResponses
+    Name: Litany Responses
+    TocExempt: true
+    Type: library-pdf
+    Path: common/litany-responses.pdf
+    Pages:
+      End: 1
+    Side: verso
+  - Key: LitanyOfPeace
+    Name: Litany of Peace
+    Type: local-md
+    Path: components/common/great-litany.md
+  - Key: OlihcInstructions
+    Name: O Lord, I Have Cried
+    Type: local-md
+    Path: components/vespers/olihc.md
+    Side: recto
+  - Key: Olihc
+    Name: O Lord, I Have Cried
+    TocExempt: true
+    Type: library-pdf
+    Path: vespers/o-lord-i-have-cried/o-lord-i-have-cried-tone-8.pdf
+    Pages:
+      End: 2
+    Side: verso
+  - Key: OlihcVerses
+    Name: O Lord, I Have Cried Verses
+    TocExempt: true
+    Type: local-md
+    Path: components/vespers/olihc-verses.md
+  - Key: Stichera
+    Name: Stichera
+    TocExempt: true
+    Type: local-md
+    Path: components/vespers/stichera.md
+  - Key: GladsomeLight
+    Name: O Gladsome Light
+    Type: local-md
+    Path: components/vespers/gladsome-light.md
+  - Key: ProkeimenonInstructions
+    Name: Prokeimenon
+    TocExempt: true
+    Type: local-md
+    Path: components/vespers/prokeimenon-daily.md
+    Side: verso
+  - Key: Prokeimenon
+    Name: Wednesday Evening Prokeimenon
+    Type: library-pdf
+    Path: vespers/prokeimenon/wednesday.pdf
+    Pages:
+      End: 1
+  - Key: Readings
+    Name: Readings
+    Type: local-md
+    Path: components/common/readings.md
+  - Key: EveningPrayer
+    Name: The Evening Prayer
+    Type: local-md
+    Path: components/vespers/evening-prayer.md
+  - Key: LitanyResponses2
+    Name: Litany Responses
+    TocExempt: true
+    Type: library-pdf
+    Path: common/litany-responses.pdf
+    Pages:
+      End: 1
+    Side: verso
+  - Key: Supplication
+    Name: The Litany of Supplication
+    Type: local-md
+    Path: components/vespers/supplication.md
+  - Key: Peace
+    Name: The Peace
+    Type: library-pdf
+    Path: vespers/peace/peace.pdf
+  - Key: Aposticha
+    Name: Aposticha
+    Type: local-md
+    Path: components/vespers/aposticha.md
+  - Key: StSimeonsPrayer
+    Name: St Simeon's Prayer
+    Type: local-md
+    Path: components/vespers/st-simeon.md
+  - Key: TrisagionPrayers
+    Name: Trisagion Prayers
+    Type: local-md
+    Path: components/common/trisagion-prayers.md
+  - Key: HymnsOfTheDay
+    Name: Hymns of the Day
+    Type: local-md
+    Path: components/vespers/hymns-of-the-day-daily.md
+  - Key: EkteniaResponses
+    Name: Ektenia Responses
+    TocExempt: true
+    Type: library-pdf
+    Path: common/ektenia-responses.pdf
+    Side: verso
+  - Key: Ektenia
+    Name: The Litany of Fervent Supplication
+    Type: local-md
+    Path: components/vespers/ektenia-daily.md
+  - Key: Dismissal
+    Name: Dismissal
+    Type: local-md
+    Path: components/vespers/dismissal.md
