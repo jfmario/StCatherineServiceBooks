@@ -81,3 +81,8 @@ Components:
     Name: Paschal Aposticha
     Type: library-pdf
     Path: holy-week/08-pascha/paschal-aposticha.pdf
+  - Key: TheAngelCried
+    Name: The Angel Cried
+    Type: library-pdf
+    Path: holy-week/08-pascha/the-angel-cried.pdf
+    Side: verso
