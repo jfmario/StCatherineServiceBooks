@@ -26,6 +26,7 @@ Choir book project YAMLs live in `projects/choir-books/`:
 - `divine-liturgy.yaml` — Divine Liturgy of St John Chrysostom / St Basil
 - `episcopal.yaml` — Episcopal services
 - `great-vespers.yaml` — Great Vespers (Saturday evenings / feast eves)
+- `hours.yaml` — The Hours
 - `sunday-orthros.yaml` — Sunday Orthros
 - `festal-orthros.yaml` — Festal Orthros
 - `typika.yaml` — Typika
@@ -42,6 +43,7 @@ components/     # Source fragments, organized by type and service
   orthros/
   vespers/
   baptism/
+  hours/
   booklets/        # LaTeX fragments for booklets
     common/        # Shared across multiple booklets (Creed, Lord's Prayer, etc.)
     divine-liturgy/
